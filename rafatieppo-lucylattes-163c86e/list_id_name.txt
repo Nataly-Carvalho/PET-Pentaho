@@ -1,0 +1,6 @@
+# Mantenha como separador a vígula
+# Não altere o nome das colunas (linha 5)
+# Não altere a ordem das colunas e das 5 primeiras linhas
+# Insira o nome ABREVIADO do pesquisador
+ID_LATTES,NAME,GROUP
+0266043277510432,TiagoG,iot
