@@ -76,4 +76,57 @@ def getLinhasPesq(zipname):
         latid = zipname.split('.')[0]
         pathfilename = str('./csv_producao/'+latid+'_ldp'  '.csv')
         df_ldp.to_csv(pathfilename, index=False)
-        print(pathfilename, 'gravado com', len(df_ldp['PESQUISA']),'pesquisa' )
+        print(pathfilename, 'gravado com', len(df_ldp['PESQUISA']),'linhas de pesquisas' )
+
+
+def getProjEns(zipname):
+    zipfilepath = './xml_zip' + '/' + str(zipname)
+    archive = zipfile.ZipFile(zipfilepath, 'r')
+    lattesxmldata = archive.open('curriculo.xml')
+    soup = BeautifulSoup(lattesxmldata, 'lxml',
+                         from_encoding='ISO-8859-1')
+    pen = soup.find_all('atividades-de-participacao-em-projeto')
+
+    if pen ==0:
+        print('atividades de participação em projeto não encontradas')
+    else:
+        ls_nome = []
+        ls_yin = []
+        ls_yfin = []
+        ls_desc = []
+        ls_sit = []
+        ls_test = []
+        for i in range(len(pen)):
+            ens = pen[i].find_all('participacao-em-projeto')
+            for j in range(len(ens)):
+                ensino = ens[j].find_all('projeto-de-pesquisa')
+                for k in range(len(ensino)):
+                    qtdens = str(ensino[k])
+                    cc = fun_result(re.search('natureza=(.*) nome-coordenador-certificacao', qtdens))
+                    if cc == '"ENSINO"':
+                        ls_test.append(cc)
+                        result = re.search('descricao-do-projeto=\"(.*)\" descricao-do-projeto-i', qtdens)
+                        ccc = fun_result(result)
+                        ls_desc.append(ccc)
+
+                        result = re.search('nome-do-projeto=\"(.*)\" nome-do-projeto-i', qtdens)
+                        ccc = fun_result(result)
+                        ls_nome.append(ccc)
+
+                        result = re.search('ano-inicio="(.*)" data-c', qtdens)
+                        ccc = fun_result(result)
+                        ls_yin.append(ccc)
+
+                        result = re.search('situacao="(.*)"><equipe', qtdens)
+                        ccc = fun_result(result)
+                        ls_sit.append(ccc)
+
+                        result = re.search('ano-fim="(.*)" ano-inicio', qtdens)
+                        ccc = fun_result(result)
+                        if result is None:
+                            ccc= 'VAZIO'
+                        else:
+                            ccc=result.group(1)
+                        if ccc == '':
+                            ccc = 'ATUAL'
+                        ls_yfin.append(ccc)
