@@ -1,3 +1,8 @@
 TITULO,ANO,ENTIDADE_PROMOTORA
+<<<<<<< HEAD
+Concurso Nacional Vivo Downloads - Categoria Vivo Idéia,2004,VIVO
+Senior Member,2019,IEEE
+=======
 VAZIO,"2004"" nome-da-entidade-promotora=""VIVO"" nome-do-premio-ou-titulo=""Concurso Nacional Vivo Downloads - Categoria Vivo Idéia",VAZIO
 VAZIO,"2019"" nome-da-entidade-promotora=""IEEE"" nome-do-premio-ou-titulo=""Senior Member",VAZIO
+>>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
