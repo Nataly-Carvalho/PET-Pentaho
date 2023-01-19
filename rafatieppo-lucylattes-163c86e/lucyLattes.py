@@ -30,6 +30,10 @@ from index_capes import capes_indori
 from index_capes import capes_indautdis
 from index_capes import capes_distindproddp
 from scraperlattes import getLinhasPesq
+<<<<<<< HEAD
+=======
+from scraperlattes import getProjEns
+>>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
 from scraperlattes import getpremio
 from remove_csvproducao import removeCsvProducao
 from tabulate import tabulate
@@ -66,6 +70,10 @@ for nid in range(len(df_idlist)):
     getnomecompleto(zipfilename)
     getdiscip(zipfilename)
     getLinhasPesq(zipfilename)
+<<<<<<< HEAD
+=======
+    getProjEns(zipfilename)
+>>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
     getpremio(zipfilename)
 
 gettidydf()

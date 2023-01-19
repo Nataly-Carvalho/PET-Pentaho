@@ -4,3 +4,4 @@
 # Insira o nome ABREVIADO do pesquisador
 ID_LATTES,NAME,GROUP
 0266043277510432,TiagoG,iot
+0342261677880699,TatalinaC,des
