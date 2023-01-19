@@ -4,6 +4,7 @@
 
 import numpy as np
 import pandas as pd
+
 from bs4 import BeautifulSoup
 import os
 import requests
@@ -1224,34 +1225,50 @@ def getpremio(zipname):
     zipfilepath = './xml_zip' + '/'+ str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
     lattesxmldata = archive.open('curriculo.xml')
-    soup = BeautifulSoup (lattesxmldata, 'lxml', from_encoding= 'ISO-8859-1')
-    pts = soup.find_all ('premios-titulo')
+    soup = BeautifulSoup(lattesxmldata, 'lxml', from_encoding='ISO-8859-1')
 
+    pts = soup.find_all('premios-titulos')
+    print(len(pts))
     if len(pts) == 0:
-        print('Demais premios e titulos não encontrado para: ', zipname)
+        print('**', zipname)
     else:
-        ls_pt_name = []
-        ls_pt_entpromot = []
-        ls_pt_year = []
-        ls_pt_name_i =[]
+        ls_pt_name=[]
+        ls_pt_entpromot=[]
+        ls_pt_year=[]
+
         for i in range(len(pts)):
             pt = pts[i].find_all('premio-titulo')
+            print(len(pt))
             if len(pt) == 0:
-                print('Premios e titulos não encontrado para', zipname)
+                print('Premios e titulos não encontrado para')
+
             else:
-                for j in range (len(pt)):
-                    titulo = str(pt[j])
-                    result = re.search('nome-do-premio-ou-titulo\"(.*)\" nome-da-entidade-promotora', titulo_premio)
+
+                for k in range(len(pt)):
+                    pt_name = str(pt[k])
+
+                    result = re.search('nome-do-premio-ou-titulo="(.*)" nome-do-premio-ou-titulo-i', pt_name)
                     cc = fun_result(result)
+                    print(cc)
                     ls_pt_name.append(cc)
 
-                    titulo_premio = str(pt[j])
-                    result = re.search('ano-da-premiacao=\"(.*)\" nome-do-premio-ou-titulo-ingles', titulo_premio)
+                    result = re.search('ano-da-premiacao="(.*)" nome-da-entidade-promotora', pt_name)
                     cc = fun_result(result)
+                    print(cc)
                     ls_pt_year.append(cc)
-                    entpromot = pt[j].find_all('entidade-promotora')
-                    ls_all_premios_titulo = []
 
-                    for k in range (len(entpromot)):
-                        entpromot = str(entpromot[k])
-                        result = re.search('nome-da-entidade-promotora')
+
+                    result = re.search('nome-da-entidade-promotora=\"(.*)\" nome-do-premio-ou-titulo=', pt_name)
+                    cc = fun_result(result)
+                    print(cc)
+                    ls_pt_entpromot.append(cc)
+
+        df_pt = pd.DataFrame({'TITULO':ls_pt_name,
+                               'ANO':ls_pt_year,
+                               'ENTIDADE_PROMOTORA':ls_pt_entpromot
+                              })
+        latid = zipname.split('.')[0]
+        pathfilename = str('./csv_producao/' + latid + '_pt'  '.csv')
+        df_pt.to_csv(pathfilename, index=False)
+        print(pathfilename, ' gravado com',
+              len(df_pt['TITULO']), ' premios e titulos')
