@@ -13,7 +13,7 @@ from extrafuns import fun_result
 
 def getLinhasPesq(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
->>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
+
     archive = zipfile.ZipFile(zipfilepath, 'r')
     lattesxmldata = archive.open('curriculo.xml')
     soup = BeautifulSoup (lattesxmldata, 'lxml', from_encoding= 'ISO-8859-1')
@@ -23,7 +23,7 @@ def getLinhasPesq(zipname):
     if len(pts) == 0:
         print('Demais premios e titulos não encontrado para:', zipname)
     else:
-<<<<<<< HEAD
+
         ls_pt_name=[]
         ls_pt_entpromot=[]
         ls_pt_year=[]
@@ -33,7 +33,7 @@ def getLinhasPesq(zipname):
             if len(pt) == 0:
                 print('Premios e titulos não encontrado para')
 
-=======
+
         ls_pesq = []
         ls_obj_pesq = []
         ls_yini = []
@@ -67,14 +67,14 @@ def getLinhasPesq(zipname):
             app = ap[i].find_all('pesquisa-e-desenvolvimento')
             if len(app) == 0:
                 print('linhas de pesquisas não encontradas')
->>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
+
             else:
                 for j in range(len(pt)):
                     prem = pt[j].find_all('premio-titulo')
                     for k in range(len(prem)):
                         pt_name = str(prem[k])
 
-<<<<<<< HEAD
+
                         result = re.search('nome-do-premio-ou-titulo=\"(.*)\" nome-da-entidade-promotora', pt_name)
                         cc = fun_result(result)
                         ls_pt_name.append(cc)
@@ -98,7 +98,7 @@ def getLinhasPesq(zipname):
         df_pt.to_csv(pathfilename, index=False)
         print(pathfilename, ' gravado com',
               len(df_pt['TITULO']), ' premios e titulos')
-=======
+
                 for l in range(len(app)):
                     ldp = app[l].find_all('linha-de-pesquisa')
                     for k in range(len(ldp)):
@@ -176,4 +176,4 @@ def getProjEns(zipname):
                         if ccc == '':
                             ccc = 'ATUAL'
                         ls_yfin.append(ccc)
->>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
+
