@@ -1229,8 +1229,7 @@ def getLinhasPesq(zipname):
         latid = zipname.split('.')[0]
         pathfilename = str('./csv_producao/' + latid + '_ldp'  '.csv')
         df_ldp.to_csv(pathfilename, index=False)
-<<<<<<< HEAD
-        print(pathfilename, 'gravado com', len(df_ldp['TITLE']),'pesquisa' )
+        print(pathfilename, 'gravado com', len(df_ldp['PESQUISA']), 'linhas de pesquisas')
 
 
 def getpremio(zipname):
@@ -1284,8 +1283,7 @@ def getpremio(zipname):
         df_pt.to_csv(pathfilename, index=False)
         print(pathfilename, ' gravado com',
               len(df_pt['TITULO']), ' premios e titulos')
-=======
-        print(pathfilename, 'gravado com', len(df_ldp['PESQUISA']), 'linhas de pesquisas')
+
 
 
 def getProjEns(zipname):
@@ -1350,8 +1348,42 @@ def getProjEns(zipname):
         df_projEns.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com ', len(df_projEns['PROJETO']), 'projetos de ensino')
 
+def getProducoes(zipname):
+    zipfilepath = './xml_zip' + '/' + str(zipname)
+    archive = zipfile.ZipFile(zipfilepath, 'r')
+    lattesxmldata = archive.open('curriculo.xml')
+    soup = BeautifulSoup(lattesxmldata, 'lxml')
 
+    ap = soup.find_all('producoes-ct-do-projeto')
 
+    if len(ap) == 0:
+        print('Producoes ct do projeto nao encontrado em', zipname)
+    else:
+        # lista de armazenamento de producoes
+        ls_ttProd = []
+        ls_tpProd = []
 
+        for i in range(len(ap)):
+            prd = ap[i].find_all('producao-ct-do-projeto')
 
->>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
+            if len(ap) == 0:
+                print('producao ct do projeto nao encontrado em', zipname)
+            else:
+                for j in range(len(prd)):
+                    prodCT = str(prd[j])
+                    result = re.search('titulo-da-producao-ct=\"(.*)\" titulo-da-producao-ct-i', prodCT)
+                    cc = fun_result(result)
+                    ls_ttProd.append(cc)
+
+                    prodCT = str(prd[j])
+                    result = re.search('tipo-producao-ct=\"(.*)\" titulo-da-producao-ct="', prodCT)
+                    cc = fun_result(result)
+                    ls_tpProd.append(cc)
+
+        df_prods = pd.DataFrame({'TITULO': ls_ttProd,
+                                'TIPO': ls_tpProd})
+        latid = zipname.split('.')[0]
+        pathfilename = str('./csv_producao/' + latid + '_prods' '.csv')
+        df_prods.to_csv(pathfilename, index=False)
+        print(pathfilename, 'gravado com', len(df_prods['TITULO']), 'producoes de CT')
+
