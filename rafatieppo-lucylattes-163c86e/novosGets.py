@@ -59,11 +59,13 @@ def getLinhasPesq(zipname):
             app = ap[i].find_all('pesquisa-e-desenvolvimento')
             if len(app) == 0:
                 print('linhas de pesquisas não encontradas')
+
             else:
                 for j in range(len(pt)):
                     prem = pt[j].find_all('premio-titulo')
                     for k in range(len(prem)):
                         pt_name = str(prem[k])
+
                         result = re.search('nome-do-premio-ou-titulo=\"(.*)\" nome-da-entidade-promotora', pt_name)
                         cc = fun_result(result)
                         ls_pt_name.append(cc)
@@ -165,6 +167,7 @@ def getProjEns(zipname):
                         if ccc == '':
                             ccc = 'ATUAL'
                         ls_yfin.append(ccc)
+
 
 def getProducoes(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
