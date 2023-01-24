@@ -1286,6 +1286,7 @@ def getpremio(zipname):
 
 
 
+
 def getProjEns(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
@@ -1347,7 +1348,6 @@ def getProjEns(zipname):
         pathfilename = str('./csv_producao/'+latid+'_proj_ens'  '.csv')
         df_projEns.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com ', len(df_projEns['PROJETO']), 'projetos de ensino')
-
 def getProducoes(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
@@ -1386,7 +1386,6 @@ def getProducoes(zipname):
         pathfilename = str('./csv_producao/' + latid + '_prods' '.csv')
         df_prods.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com', len(df_prods['TITULO']), 'producoes de CT')
-
 def getBancas(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
@@ -1703,4 +1702,5 @@ def getBancas(zipname):
         pathfilename = str('./csv_producao/' + latid + '_bancas' '.csv')
         df_bancas.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravando com', len(df_bancas['NATUREZA']), 'bancas')
+
 
