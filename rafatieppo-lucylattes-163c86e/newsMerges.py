@@ -19,3 +19,4 @@ dffullname = dffullname.reset_index(drop=True)
 pathfilename = str('./csv_producao/ldp_all.csv')
 dfldp.to_csv(pathfilename, index=False)
 print(pathfilename, 'gravado com', len(dfldp['PESQUISA']), 'linhas de pesquisa')
+
