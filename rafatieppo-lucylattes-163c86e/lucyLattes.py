@@ -33,7 +33,12 @@ from scraperlattes import getLinhasPesq
 
 from scraperlattes import getProjEns
 
+
+from scraperlattes import getProjEns
+
+
 from scraperlattes import getpremio
+from scraperlattes import getProducoes
 from remove_csvproducao import removeCsvProducao
 from tabulate import tabulate
 import pandas as pd
@@ -71,6 +76,7 @@ for nid in range(len(df_idlist)):
     getLinhasPesq(zipfilename)
     getProjEns(zipfilename)
     getpremio(zipfilename)
+    getProducoes(zipfilename)
 
 gettidydf()
 getverificacao()
