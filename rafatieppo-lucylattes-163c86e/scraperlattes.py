@@ -1386,5 +1386,321 @@ def getProducoes(zipname):
         pathfilename = str('./csv_producao/' + latid + '_prods' '.csv')
         df_prods.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com', len(df_prods['TITULO']), 'producoes de CT')
+def getBancas(zipname):
+    zipfilepath = './xml_zip' + '/' + str(zipname)
+    archive = zipfile.ZipFile(zipfilepath, 'r')
+    lattesxmldata = archive.open('curriculo.xml')
+    soup = BeautifulSoup(lattesxmldata, 'lxml',
+                        from_encoding='ISO-8859-1')
+
+# extrair PARTICIPACAO-EM-BANCA-TRABALHOS-CONCLUSAO
+    part_traba_c = soup.find_all('participacao-em-banca-trabalhos-conclusao')
+# VERIFICANDO se ha participacao
+    if len(part_traba_c) == 0:
+        print(
+            'participacao em bancas de trabalhos de conclusão não encontrada para:', zipname)
+    else:
+        ls_natu_banca = []
+        ls_title_banca = []
+        ls_year_banca = []
+        ls_pais_banca = []
+        ls_idioma_banca = []
+
+        ls_nome_banca = []
+        ls_codinst_banca = []
+        ls_nomeinst_banca = []
+        ls_orgao_banca = []
+
+        ls_nome_part = []
+        ls_ordem_partc = []
+        ls_nomeCurso_banca = []
+        ls_nome_cita = []
+        ls_nroidcnpq = []
+
+        keyword1 = []
+        keyword2 = []
+        keyword3 = []
+        keyword4 = []
+        keyword5 = []
+        keyword6 = []
+
+        ls_nBIGadc = []
+        ls_ndAreadc = []
+        ls_ndSUBadoc = []
+        ls_especialidade = []
+
+        for i in range(len(part_traba_c)):
+            # PARTICIPACAO-EM-BANCA-DE-MESTRADO
+            part_bancas = part_traba_c[i].find_all(
+                'participacao-em-banca-de-mestrado')
+            if len(part_bancas) == 0:
+                print('participante em banca de mestrado nao encontrado', zipname)
+            else:  # DADOS-BASICOS-DA-PARTICIPACAO-EM-BANCA-DE-GRADUACAO
+                for j in range(len(part_bancas)):
+                    ptb = part_bancas[j].find_all(
+                        'dados-basicos-da-participacao-em-banca-de-mestrado')
+
+                    for k in range(len(ptb)):
+                        dadosbanca = str(ptb[k])
+                        result = re.search(
+                            'natureza=\"(.*)\" pais', dadosbanca)
+                        cc = fun_result(result)
+                        ls_natu_banca.append(cc)
+                        print(cc, '*********************************')
+
+                        # titulo
+                        result = re.search('titulo=\"(.*)\" titulo-i', dadosbanca)
+                        cc = fun_result(result)
+                        ls_title_banca.append(cc)
+                        print(cc, '*********************************')
+                        # ano
+                        result = re.search('ano=\"(.*)\" doi', dadosbanca)
+                        cc = fun_result(result)
+                        ls_year_banca.append(cc)
+                        print(cc, '*********************************')
+
+                        # pais
+                        result = re.search('pais=\"(.*)\" tipo', dadosbanca)
+                        cc = fun_result(result)
+                        ls_pais_banca.append(cc)
+                        print(cc, '*********************************')
+
+                        # idioma
+                        result = re.search('idioma=\"(.*)\" natureza', dadosbanca)
+                        cc = fun_result(result)
+                        ls_idioma_banca.append(cc)
+                        print(cc, '*********************************')
+
+                        # detalhe participantes da banca
+                        # DETALHAMENTO-DA-PARTICIPACAO-EM-BANCA-DE-MESTRADO
+                        detalhe= part_bancas[j].find_all('detalhamento-da-participacao-em-banca-de-mestrado')
+                        for m in range(len(detalhe)):
+                            detalhe_banca = str(detalhe[m])
+
+                            # nome do candidato
+                            result = re.search(
+                                'nome-do-candidato=\"(.*)\" nome-i=', detalhe_banca)
+                            cc = fun_result(result)
+                            ls_nome_banca.append(cc)
+                            print(cc, '*********************************')
+
+                            # codigo da instituicao
+                            result = re.search(
+                                'codigo-instituicao=\"(.*)\" codigo-o', detalhe_banca)
+                            cc = fun_result(result)
+                            ls_codinst_banca.append(cc)
+                            print(cc, '*********************************')
+
+                            # nome instituicao
+                            result = re.search(
+                                'nome-instituicao=\"(.*)\" nome-o', detalhe_banca)
+                            cc = fun_result(result)
+                            ls_nomeinst_banca.append(cc)
+                            print(cc, '*********************************')
+
+                            # nome do orgao
+                            result = re.search('nome-orgao=\"(.*)\"/>', detalhe_banca)
+                            cc = fun_result(result)
+                            ls_orgao_banca.append(cc)
+                            print(cc, '*********************************')
+
+                            # nome do curso
+                            result = re.search(
+                                'nome-curso=\"(.*)\" nome-curso-i', detalhe_banca)
+                            cc = fun_result(result)
+                            ls_nomeCurso_banca.append(cc)
+                            print(cc, '*********************************')
+
+                        Partcipantes = part_bancas[j].find_all('participante-banca')
+                        parts = ''
+                        ord = ''
+                        nomeC = ''
+                        nro = ''
+                        for n in range(len(Partcipantes)):
+                            partcipantes = str(Partcipantes[n])
+
+                            result = re.search(
+                                'nome-completo-do-participante-da-banca=\"(.*)\" nome-para', partcipantes)
+                            cc = fun_result(result)
+                            #
+                            parts = parts + cc +';'
+                            print(parts)
+
+
+
+                            # nome-para-citacao-participante-da-banca
+                            result = re.search(
+                                'nome-para-citacao-do-participante-da-banca=\"(.*)\" nro-id', partcipantes)
+                            cc = fun_result(result)
+                            #ls_nome_cita.append(cc)
+                            nomeC = nomeC + cc + ';'
+                            print(nomeC)
+
+                            # ordem participante
+                            result = re.search(
+                                'ordem-participante="(.*)">', partcipantes)
+                            cc = fun_result(result)
+                            #ls_ordem_partc.append(cc)
+                            ord = ord + cc +';'
+                            print(ord)
+
+
+                            # nro id cnpq
+                            result = re.search('nro-id-cnpq=\"(.*)\" ordem-p', partcipantes)
+                            cc = fun_result(result)
+                            #ls_nroidcnpq.append(cc)
+                            if cc == '':
+                                nro = ''
+                            else:
+                                nro = nro + cc + ';'
+                            print(nro)
+
+                        ls_nome_part.append(parts)
+                        ls_nome_cita.append(nomeC)
+                        ls_ordem_partc.append(ord)
+                        ls_nroidcnpq.append(nro)
+
+                        Palavras = part_bancas[j].find_all('palavras-chave')
+                        p1 =''
+                        p2 =''
+                        p3 =''
+                        p4 =''
+                        p5 =''
+                        p6 =''
+                        for o in range(len(Palavras)):
+                            palavras = str(Palavras[o])
+
+                            # palavras chaves
+                            result = re.search(
+                                'palavra-chave-1=\"(.*)\" palavra-chave-2',palavras)
+                            cc = fun_result(result)
+                            #keyword1.append(cc)
+                            if cc == '':
+                                p1 =''
+                            else:
+                                p1 = p1 + cc +';'
+
+                            result = re.search(
+                                'palavra-chave-2=\"(.*)\" palavra-chave-3',palavras)
+                            cc = fun_result(result)
+                            #keyword2.append(cc)
+                            if cc == '':
+                                p2 = ''
+                            else:
+                                p2 = p2 + cc + ';'
+
+                            result = re.search(
+                                'palavra-chave-3=\"(.*)\" palavra-chave-4',palavras)
+                            cc = fun_result(result)
+                            #keyword3.append(cc)
+                            if cc == '':
+                                p3 = ''
+                            else:
+                                p3 = p3 + cc + ';'
+
+                            result = re.search(
+                                'palavra-chave-4=\"(.*)\" palavra-chave-5',palavras)
+                            cc = fun_result(result)
+                            #keyword4.append(cc)
+                            if cc == '':
+                                p4 = ''
+                            else:
+                                p4 = p4 + cc + ';'
+
+                            result = re.search(
+                                'palavra-chave-5=\"(.*)\" palavra-chave-6',palavras)
+                            cc = fun_result(result)
+                            #keyword5.append(cc)
+                            if cc == '':
+                                p5 = ''
+                            else:
+                                p5 = p5 + cc + ';'
+
+                            result = re.search('palavra-chave-6=\"(.*)\">',palavras)
+                            cc = fun_result(result)
+                            #keyword6.append(cc)
+                            if cc == '':
+                                p6 = ''
+                            else:
+                                p6 = p6 + cc + ';'
+                        keyword1.append(p1)
+                        keyword2.append(p2)
+                        keyword3.append(p3)
+                        keyword4.append(p4)
+                        keyword5.append(p5)
+                        keyword6.append(p6)
+
+
+                    areasConhec = part_bancas[j].find_all('areas-do-conhecimento')
+                    # verificando se ha areas do conhecimento
+                    if len(areasConhec) == 0:
+                        print('areas do conhecimento nao encontradas', zipname)
+                    else:
+                        for l in range(len(areasConhec)):
+                            conhec = areasConhec[l].find_all('area-do-conhecimento-1')
+                            conhec = str(conhec)
+
+                            # nome-grande-area-do-conhecimento
+                            result = re.search(
+                                'nome-grande-area-do-conhecimento="(.*)">', conhec)
+                            cc = fun_result(result)
+                            ls_nBIGadc.append(cc)
+                            print(ls_nBIGadc)
+
+                            # NOME-DA-AREA-DO-CONHECIMENTO
+                            result = re.search(
+                                'nome-da-area-do-conhecimento=\"(.*)\" nome-da-especialidade', conhec)
+                            cc = fun_result(result)
+                            ls_ndAreadc.append(cc)
+                            print(ls_ndAreadc)
+
+                            # nome-da-sub-area-do-conhecimento
+                            result = re.search(
+                                'nome-da-sub-area-do-conhecimento=\"(.*)\" nome-g', conhec)
+                            cc = fun_result(result)
+                            ls_ndSUBadoc.append(cc)
+                            print(ls_ndSUBadoc)
+
+                            # nome-da-especialidade
+                            result = re.search('nome-da-especialidade="(.*)" nome-da-su', conhec)
+                            cc = fun_result(result)
+                            ls_especialidade.append(cc)
+                            print(ls_especialidade)
+
+        # dataDrame bancas
+        df_bancas = pd.DataFrame({
+            'NATUREZA': ls_natu_banca,
+            'TITULO': ls_title_banca,
+            'ANO': ls_year_banca,
+            'PAIS': ls_pais_banca,
+            'IDIOMA': ls_idioma_banca,
+
+            'NOME-DO-CANDIDATO': ls_nome_banca,
+            'CODIGO_INSTITUICAO': ls_codinst_banca,
+            'NOME-DA-INSTITUICAO': ls_nomeinst_banca,
+            'NOME-ORGAO': ls_orgao_banca,
+            'NOME-DO-CURSO': ls_nomeCurso_banca,
+
+            'NOME-PARTICIPANTE-BANCA': ls_nome_part,
+            'ORDEM-PARTICIPANTE': ls_ordem_partc,
+            'NOME-CITACAO-BANCA': ls_nome_cita,
+            'NRO-ID-CNPQ': ls_nroidcnpq,
+
+            'PALAVRA-1': keyword1,
+            'PALAVRA-2': keyword2,
+            'PALAVRA-3': keyword3,
+            'PALAVRA-4': keyword4,
+            'PALAVRA-5': keyword5,
+            'PALAVRA-6': keyword6,
+
+            'NOME-GRANDE-AREA-DO-CONHECIMENTO': ls_nBIGadc,
+            'NOME-DA-AREA-DO-CONHECIMENTO': ls_ndAreadc,
+            'NOME-DA-SUB-AREA-DO-CONHECIMENTO': ls_ndSUBadoc,
+            'NOME-DA-ESPECIALIDADE': ls_especialidade})
+
+        latid = zipname.split('.')[0]
+        pathfilename = str('./csv_producao/' + latid + '_bancas' '.csv')
+        df_bancas.to_csv(pathfilename, index=False)
+        print(pathfilename, 'gravando com', len(df_bancas['NATUREZA']), 'bancas')
 
 
