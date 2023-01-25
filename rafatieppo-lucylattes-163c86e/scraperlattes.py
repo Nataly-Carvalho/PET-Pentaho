@@ -1668,39 +1668,39 @@ def getBancas(zipname):
                             print(ls_especialidade)
 
         # dataDrame bancas
-        df_bancas = pd.DataFrame({
-            'NATUREZA': ls_natu_banca,
-            'TITULO': ls_title_banca,
-            'ANO': ls_year_banca,
-            'PAIS': ls_pais_banca,
-            'IDIOMA': ls_idioma_banca,
+        #df_bancas = pd.DataFrame({
+        #    'NATUREZA': ls_natu_banca,
+        #    'TITULO': ls_title_banca,
+        #    'ANO': ls_year_banca,
+        #    'PAIS': ls_pais_banca,
+        #    'IDIOMA': ls_idioma_banca,
 
-            'NOME-DO-CANDIDATO': ls_nome_banca,
-            'CODIGO_INSTITUICAO': ls_codinst_banca,
-            'NOME-DA-INSTITUICAO': ls_nomeinst_banca,
-            'NOME-ORGAO': ls_orgao_banca,
-            'NOME-DO-CURSO': ls_nomeCurso_banca,
+        #    'NOME-DO-CANDIDATO': ls_nome_banca,
+        #    'CODIGO_INSTITUICAO': ls_codinst_banca,
+        #    'NOME-DA-INSTITUICAO': ls_nomeinst_banca,
+        #    'NOME-ORGAO': ls_orgao_banca,
+        #    'NOME-DO-CURSO': ls_nomeCurso_banca,
 
-            'NOME-PARTICIPANTE-BANCA': ls_nome_part,
-            'ORDEM-PARTICIPANTE': ls_ordem_partc,
-            'NOME-CITACAO-BANCA': ls_nome_cita,
-            'NRO-ID-CNPQ': ls_nroidcnpq,
+        #   'NOME-PARTICIPANTE-BANCA': ls_nome_part,
+        #    'ORDEM-PARTICIPANTE': ls_ordem_partc,
+        #    'NOME-CITACAO-BANCA': ls_nome_cita,
+        #    'NRO-ID-CNPQ': ls_nroidcnpq,
 
-            'PALAVRA-1': keyword1,
-            'PALAVRA-2': keyword2,
-            'PALAVRA-3': keyword3,
-            'PALAVRA-4': keyword4,
-            'PALAVRA-5': keyword5,
-            'PALAVRA-6': keyword6,
+        #    'PALAVRA-1': keyword1,
+        #    'PALAVRA-2': keyword2,
+        #    'PALAVRA-3': keyword3,
+        #    'PALAVRA-4': keyword4,
+        #    'PALAVRA-5': keyword5,
+        #    'PALAVRA-6': keyword6,
 
-            'NOME-GRANDE-AREA-DO-CONHECIMENTO': ls_nBIGadc,
-            'NOME-DA-AREA-DO-CONHECIMENTO': ls_ndAreadc,
-            'NOME-DA-SUB-AREA-DO-CONHECIMENTO': ls_ndSUBadoc,
-            'NOME-DA-ESPECIALIDADE': ls_especialidade})
+        #    'NOME-GRANDE-AREA-DO-CONHECIMENTO': ls_nBIGadc,
+        #    'NOME-DA-AREA-DO-CONHECIMENTO': ls_ndAreadc,
+        #    'NOME-DA-SUB-AREA-DO-CONHECIMENTO': ls_ndSUBadoc,
+        #    'NOME-DA-ESPECIALIDADE': ls_especialidade})
 
-        latid = zipname.split('.')[0]
-        pathfilename = str('./csv_producao/' + latid + '_bancas' '.csv')
-        df_bancas.to_csv(pathfilename, index=False)
-        print(pathfilename, 'gravando com', len(df_bancas['NATUREZA']), 'bancas')
+        #latid = zipname.split('.')[0]
+        #pathfilename = str('./csv_producao/' + latid + '_bancas' '.csv')
+        #df_bancas.to_csv(pathfilename, index=False)
+        #print(pathfilename, 'gravando com', len(df_bancas['NATUREZA']), 'bancas')
 
 
