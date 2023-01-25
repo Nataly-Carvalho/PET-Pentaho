@@ -1,0 +1,5 @@
+INSTITUTION,YEAR_INI,YEAR_FIN,MONTH_INI,MONTH_FIN,COURSE,TYPE,DISC
+ASF Consultoria e Cursos de Informática,1999,06,06,06,Lógica e Programação,ESPECIALIZACAO,"['MS Visual Basic', 'Borland Delphi', 'Programação Orientada a Objetos', 'Lógica de Programação', 'Programação Estruturada']"
+Centro de Ensino Técnico de Varginha,2000,06,06,06,Técnico em Processamento de Dados,GRADUACAO,"['Programação', 'Análi de Sistemas', 'Banco de Dados', 'Lógica']"
+Universidade Federal de Pernambuco,2003,10,10,10,Engenharia Mecânica,APERFEICOAMENTO,['Arquitetura de Micro Controladores']
+Centro de Estudos e Sistemas Avançados do Recife,2017,,ATUAL,ATUAL,Ciências da Computação,GRADUACAO,['Sistemas Digitais - Introdução à Computação - Robótica']

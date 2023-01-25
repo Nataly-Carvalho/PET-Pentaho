@@ -3,4 +3,7 @@
 # Não altere a ordem das colunas e das 5 primeiras linhas
 # Insira o nome ABREVIADO do pesquisador
 ID_LATTES,NAME,GROUP
-1335709989135375,EricoS,cc
+0266043277510432,TiagoG,iot
+0342261677880699,TatalinaC,des
+5161255861654045,HenriqueB,rob
+5801095813547312,LuizF,ia

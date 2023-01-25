@@ -1,0 +1,6 @@
+INSTITUTION,YEAR_INI,YEAR_FIN,MONTH_INI,MONTH_FIN,COURSE,TYPE,DISC
+Universidade Federal de Pernambuco,2003,,ATUAL,ATUAL,Curso Sequencial em Testes - CIn/Motorola,ESPECIALIZACAO,['Arquitetura de Software para Celulares']
+CESAR EDU,2010,12,12,12,TECNOLOGIAS PARA DES. DE APLICAÇÕES MÓVEIS,ESPECIALIZACAO,['Interfaces Físicas para Dispositivos Móveis']
+CESAR EDU,2015,12,12,12,Mestrado em Design,POS-GRADUACAO,['Prototipação Eletrônica']
+CESAR School,2017,,ATUAL,ATUAL,Especialização em Internet das Coisas,ESPECIALIZACAO,"['Introdução à internet das coisas', 'Introdução à plataforma KNoT', 'Construção de objetos conectados']"
+CESAR School,2017,,ATUAL,ATUAL,Mestrado em Design,POS-GRADUACAO,"['Prototipação Eletrônica', 'Introdução à Internet das Coisas']"
