@@ -1287,7 +1287,7 @@ def getpremio(zipname):
 
 
 
-def getProjEns(zipname):
+def getProjs(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
     lattesxmldata = archive.open('curriculo.xml')
@@ -1298,11 +1298,17 @@ def getProjEns(zipname):
     if pen ==0:
         print('atividades de participação em projeto não encontradas')
     else:
-        ls_nome = []
-        ls_yin = []
-        ls_yfin = []
-        ls_desc = []
-        ls_sit = []
+        ls_ens_nome = []
+        ls_ens_yin = []
+        ls_ens_yfin = []
+        ls_ens_desc = []
+        ls_ens_sit = []
+
+        ls_dev_nome = []
+        ls_dev_yin = []
+        ls_dev_yfin = []
+        ls_dev_desc = []
+        ls_dev_sit = []
 
         for i in range(len(pen)):
             ens = pen[i].find_all('participacao-em-projeto')
@@ -1315,19 +1321,19 @@ def getProjEns(zipname):
 
                         result = re.search('descricao-do-projeto=\"(.*)\" descricao-do-projeto-i', qtdens)
                         ccc = fun_result(result)
-                        ls_desc.append(ccc)
+                        ls_ens_desc.append(ccc)
 
                         result = re.search('nome-do-projeto=\"(.*)\" nome-do-projeto-i', qtdens)
                         ccc = fun_result(result)
-                        ls_nome.append(ccc)
+                        ls_ens_nome.append(ccc)
 
                         result = re.search('ano-inicio="(.*)" data-c', qtdens)
                         ccc = fun_result(result)
-                        ls_yin.append(ccc)
+                        ls_ens_yin.append(ccc)
 
                         result = re.search('situacao="(.*)"><equipe', qtdens)
                         ccc = fun_result(result)
-                        ls_sit.append(ccc)
+                        ls_ens_sit.append(ccc)
 
                         result = re.search('ano-fim="(.*)" ano-inicio', qtdens)
                         ccc = fun_result(result)
@@ -1337,17 +1343,60 @@ def getProjEns(zipname):
                             ccc=result.group(1)
                         if ccc == '':
                             ccc = 'ATUAL'
-                        ls_yfin.append(ccc)
+                        ls_ens_yfin.append(ccc)
 
-        df_projEns = pd.DataFrame({'PROJETO':ls_nome,
-                                   'DESCRICAO':ls_desc,
-                                   'SITUACAO':ls_sit,
-                                   'ANO_INICIO':ls_yin,
-                                   'ANO_FIM':ls_yfin})
+                    elif cc == '"DESENVOLVIMENTO"':
+
+                        result = re.search('descricao-do-projeto=\"(.*)\" descricao-do-projeto-i', qtdens)
+                        ccc = fun_result(result)
+                        ls_dev_desc.append(ccc)
+
+                        result = re.search('nome-do-projeto=\"(.*)\" nome-do-projeto-i', qtdens)
+                        ccc = fun_result(result)
+                        ls_dev_nome.append(ccc)
+
+                        result = re.search('ano-inicio="(.*)" data-c', qtdens)
+                        ccc = fun_result(result)
+                        ls_dev_yin.append(ccc)
+
+                        result = re.search('situacao="(.*)"><equipe', qtdens)
+                        ccc = fun_result(result)
+                        ls_dev_sit.append(ccc)
+
+                        result = re.search('ano-fim="(.*)" ano-inicio', qtdens)
+                        ccc = fun_result(result)
+                        if result is None:
+                            ccc = 'VAZIO'
+                        else:
+                            ccc = result.group(1)
+                        if ccc == '':
+                            ccc = 'ATUAL'
+                        ls_dev_yfin.append(ccc)
+
+
+
+
+        df_projEns = pd.DataFrame({'PROJETO':ls_ens_nome,
+                                   'DESCRICAO':ls_ens_desc,
+                                   'SITUACAO':ls_ens_sit,
+                                   'ANO_INICIO':ls_ens_yin,
+                                   'ANO_FIM':ls_ens_yfin})
         latid = zipname.split('.')[0]
         pathfilename = str('./csv_producao/'+latid+'_proj_ens'  '.csv')
         df_projEns.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com ', len(df_projEns['PROJETO']), 'projetos de ensino')
+
+        df_projDev = pd.DataFrame({'PROJETO':ls_dev_nome,
+                                   'DESCRICAO':ls_dev_desc,
+                                   'SITUACAO':ls_dev_sit,
+                                   'ANO_INICIO':ls_dev_yin,
+                                   'ANO_FIM':ls_dev_yfin})
+        latid = zipname.split('.')[0]
+        pathfilename = str('./csv_producao/' + latid + '_proj_dev'  '.csv')
+        df_projDev.to_csv(pathfilename, index=False)
+        print(pathfilename, 'gravado com ', len(df_projDev['PROJETO']), 'projetos de desenvolvimento')
+
+
 def getProducoes(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')

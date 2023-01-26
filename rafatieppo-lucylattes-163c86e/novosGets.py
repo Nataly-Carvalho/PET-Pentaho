@@ -169,7 +169,7 @@ def getProjEns(zipname):
                         ls_yfin.append(ccc)
 
 
-def getProducoes(zipname):
+'''def getProducoes(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
     lattesxmldata = archive.open('curriculo.xml')
@@ -207,3 +207,24 @@ def getProducoes(zipname):
         pathfilename = str('./csv_producao/' + latid + '_prods' '.csv')
         df_prods.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com', len(df_prods['TITULO']), 'producoes de CT')
+        '''
+def projDev(zipname):
+    zipfilepath = './xml_zip' + '/' + str(zipname)
+    archive = zipfile.ZipFile(zipfilepath, 'r')
+    lattesxmldata = archive.open('curriculo.xml')
+    soup = BeautifulSoup(lattesxmldata, 'lxml', from_encoding='ISO-8859-1')
+    pdev = soup.find_all('atividades-de-participacao-em-projeto')
+
+    if pdev == 0:
+        print('atividades de participação em projeto não encontradas')
+    else:
+        ls_natu = []
+        ls_yin = []
+        ls_yfin = []
+        ls_desc = []
+        ls_sit = []
+
+        for i in range(len)
+
+
+
