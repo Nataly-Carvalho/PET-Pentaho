@@ -1,4 +1,4 @@
-def getpremio(zipname):
+'''def getpremio(zipname):
     zipfilepath = './xml_zip' + '/'+ str(zipname)
 
 import numpy as np
@@ -29,7 +29,6 @@ def getLinhasPesq(zipname):
             pt = pts[i].find_all('premio-titulo')
             if len(pt) == 0:
                 print('Premios e titulos não encontrado para')
-
         ls_pesq = []
         ls_obj_pesq = []
         ls_yini = []
@@ -68,7 +67,6 @@ def getLinhasPesq(zipname):
                     prem = pt[j].find_all('premio-titulo')
                     for k in range(len(prem)):
                         pt_name = str(prem[k])
-
 
                         result = re.search('nome-do-premio-ou-titulo=\"(.*)\" nome-da-entidade-promotora', pt_name)
                         cc = fun_result(result)
@@ -171,3 +169,61 @@ def getProjEns(zipname):
                         if ccc == '':
                             ccc = 'ATUAL'
                         ls_yfin.append(ccc)
+
+def getProducoes(zipname):
+    zipfilepath = './xml_zip' + '/' + str(zipname)
+    archive = zipfile.ZipFile(zipfilepath, 'r')
+    lattesxmldata = archive.open('curriculo.xml')
+    soup = BeautifulSoup(lattesxmldata, 'lxml')
+
+    ap = soup.find_all('producoes-ct-do-projeto')
+
+    if len(ap) == 0:
+        print('Producoes ct do projeto nao encontrado em', zipname)
+    else:
+        # lista de armazenamento de producoes
+        ls_ttProd = []
+        ls_tpProd = []
+
+        for i in range(len(ap)):
+            prd = ap[i].find_all('producao-ct-do-projeto')
+
+            if len(ap) == 0:
+                print('producao ct do projeto nao encontrado em', zipname)
+            else:
+                for j in range(len(prd)):
+                    prodCT = str(prd[j])
+                    result = re.search('titulo-da-producao-ct=\"(.*)\" tipo-producao-ct', prodCT)
+                    cc = fun_result(result)
+                    ls_ttProd.append(cc)
+
+                    prodCT = str(prd[j])
+                    result = re.search('tipo-producao-ct=\"(.*)\" titulo-da-producao-ct-i', prodCT)
+                    cc = fun_result(result)
+                    ls_tpProd.append(cc)
+
+        df_prods = pd.DataFrame({'TITULO': ls_ttProd,
+                                 'TIPO': ls_tpProd})
+        latid = zipname.split('.')[0]
+        pathfilename = str('./csv_producao/' + latid + '_prods' '.csv')
+        df_prods.to_csv(pathfilename, index=False)
+        print(pathfilename, 'gravado com', len(df_prods['TITULO']), 'producoes de CT')
+
+def projDev(zipname):
+    zipfilepath = './xml_zip' + '/' + str(zipname)
+    archive = zipfile.ZipFile(zipfilepath, 'r')
+    lattesxmldata = archive.open('curriculo.xml')
+    soup = BeautifulSoup(lattesxmldata, 'lxml', from_encoding='ISO-8859-1')
+    pdev = soup.find_all('atividades-de-participacao-em-projeto')
+
+    if pdev == 0:
+        print('atividades de participação em projeto não encontradas')
+    else:
+        ls_natu = []
+        ls_yin = []
+        ls_yfin = []
+        ls_desc = []
+        ls_sit = []
+
+        for i in range(len)
+'''

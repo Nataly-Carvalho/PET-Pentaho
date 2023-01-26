@@ -304,3 +304,159 @@ def gettidydf():
         dfensdis.to_csv(pathfilename, index=False)
         print(pathfilename, ' gravado com',
               len(dfensdis['YEAR_INI']), ' periodos de disciplinas')
+
+    #################################################
+    #---------------LINHAS DE PESQUISA--------------#
+    #################################################
+
+    lscsv_ldp = glob.glob('./csv_producao/*_ldp.csv')
+    dfldp = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_ldp)):
+        a = pd.read_csv(lscsv_ldp[i], header=0)
+        dfldp = dfldp.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_ldp, i)
+        idrep = np.repeat(iid, len(a['PESQUISA']))
+        lsid.append(idrep)
+    dfldp['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfldp = pd.merge(dfldp, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/linhas_de_pesquisa_all.csv')
+    dfldp.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfldp['PESQUISA']), 'linhas de pesquisa')
+
+    ##################################################
+    #---------------PREMIOS OU TITULOS --------------#
+    ##################################################
+
+    lscsv_pt = glob.glob('./csv_producao/*_pt.csv')
+    dfpt = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_pt)):
+        a = pd.read_csv(lscsv_pt[i], header=0)
+        dfpt = dfpt.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_pt, i)
+        idrep = np.repeat(iid, len(a['TITULO']))
+        lsid.append(idrep)
+    dfpt['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfpt = pd.merge(dfpt, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/premios_ou_titulos_all.csv')
+    dfpt.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfpt['TITULO']), ' premios e titulos')
+
+    ##################################################
+    # ----------------- PRODUÇÕES -------------------#
+    ##################################################
+
+    lscsv_prods = glob.glob('./csv_producao/*_prods.csv')
+    dfprods = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_prods)):
+        a = pd.read_csv(lscsv_prods[i], header=0)
+        dfprods = dfprods.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_prods, i)
+        idrep = np.repeat(iid, len(a['TITULO']))
+        lsid.append(idrep)
+    dfprods['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfprods = pd.merge(dfprods, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/producoes_all.csv')
+    dfprods.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfprods['TITULO']), 'producoes de CT')
+
+    ##################################################
+    # ---------------PROJETOS DE ENSINO--------------#
+    ##################################################
+
+    lscsv_pen = glob.glob('./csv_producao/*_proj_ens.csv')
+    dfpen = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_pen)):
+        a = pd.read_csv(lscsv_pen[i], header=0)
+        dfpen = dfpen.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_pen, i)
+        idrep = np.repeat(iid, len(a['PROJETO']))
+        lsid.append(idrep)
+    dfpen['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfpen = pd.merge(dfpen, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/projetos_ensino_all.csv')
+    dfpen.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfpen['PROJETO']), 'projetos de ensino')
+
+    ######################################################
+    # ---------------CURSO DE CURTA DURAÇÃO--------------#
+    ######################################################
+
+    lscsv_cdd = glob.glob('./csv_producao/*_ccd.csv')
+    dfccd = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_cdd)):
+        a = pd.read_csv(lscsv_cdd[i], header=0)
+        dfccd = dfccd.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_cdd, i)
+        idrep = np.repeat(iid, len(a['COURSE']))
+        lsid.append(idrep)
+    dfccd['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfccd = pd.merge(dfccd, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/cursos_de_curta_duracao_all.csv')
+    dfccd.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravadp com', len(dfccd['COURSE']), 'cursos de curta duracao')
+
+    ###########################################################
+    # ---------------PROJETOS DE DESENVOLVIMENTO--------------#
+    ###########################################################
+    lscsv_prodev = glob.glob('./csv_producao/*_proj_dev.csv')
+    dfdev = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_prodev)):
+        a = pd.read_csv(lscsv_prodev[i], header=0)
+        dfdev = dfdev.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_prodev, i)
+        idrep = np.repeat(iid, len(a['DESCRICAO']))
+        lsid.append(idrep)
+    dfdev['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfdev = pd.merge(dfdev, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/projetos_desenvol_all.csv')
+    dfdev.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfdev['DESCRICAO']), 'projetos de desenvolvimento')
+
