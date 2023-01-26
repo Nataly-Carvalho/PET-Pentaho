@@ -1229,8 +1229,7 @@ def getLinhasPesq(zipname):
         latid = zipname.split('.')[0]
         pathfilename = str('./csv_producao/' + latid + '_ldp'  '.csv')
         df_ldp.to_csv(pathfilename, index=False)
-<<<<<<< HEAD
-        print(pathfilename, 'gravado com', len(df_ldp['TITLE']),'pesquisa' )
+        print(pathfilename, 'gravado com', len(df_ldp['PESQUISA']), 'linhas de pesquisas')
 
 
 def getpremio(zipname):
@@ -1284,8 +1283,8 @@ def getpremio(zipname):
         df_pt.to_csv(pathfilename, index=False)
         print(pathfilename, ' gravado com',
               len(df_pt['TITULO']), ' premios e titulos')
-=======
-        print(pathfilename, 'gravado com', len(df_ldp['PESQUISA']), 'linhas de pesquisas')
+
+
 
 
 def getProjEns(zipname):
@@ -1350,8 +1349,3 @@ def getProjEns(zipname):
         df_projEns.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com ', len(df_projEns['PROJETO']), 'projetos de ensino')
 
-
-
-
-
->>>>>>> 4cb50cb3501bbeea2cf25e908cc302fbe69943b9
