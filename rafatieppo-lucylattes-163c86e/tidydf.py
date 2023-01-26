@@ -386,7 +386,6 @@ def gettidydf():
     ##################################################
     # ---------------PROJETOS DE ENSINO--------------#
     ##################################################
-
     lscsv_pen = glob.glob('./csv_producao/*_proj_ens.csv')
     dfpen = pd.DataFrame()
     lsid = []
