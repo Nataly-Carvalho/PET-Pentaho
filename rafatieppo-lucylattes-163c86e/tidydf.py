@@ -412,27 +412,27 @@ def gettidydf():
         ######################################################
         # ---------------CURSO DE CURTA DURAÇÃO--------------#
         ######################################################
-        lscsv_cdd = glob.glob('./csv_producao/*_cdd.csv')
-        dfcdd = pd.DataFrame()
+        lscsv_cdd = glob.glob('./csv_producao/*_ccd.csv')
+        dfccd = pd.DataFrame()
         lsid = []
         for i in range(len(lscsv_cdd)):
             a = pd.read_csv(lscsv_cdd[i], header=0)
-            dfpcdd = dfcdd.append(a, ignore_index=False)
+            dfpcdd = dfccd.append(a, ignore_index=False)
             iid = fun_idd_unixwind(plat_sys, lscsv_cdd, i)
             idrep = np.repeat(iid, len(a['COURSE']))
             lsid.append(idrep)
-        dfcdd['ID'] = np.concatenate(lsid)
+        dfccd['ID'] = np.concatenate(lsid)
         lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
         len(lscsv_fullname)
         dffullname = pd.DataFrame()
         for i in range(len(lscsv_fullname)):
             a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
             dffullname = dffullname.append(a, ignore_index=False)
-        dfcdd = pd.merge(dfcdd, dffullname, on='ID')
+        dfcdd = pd.merge(dfccd, dffullname, on='ID')
         dffullname = dffullname.reset_index(drop=True)
         pathfilename = str('./csv_producao/curso_curta_duracao_all.csv')
-        dfcdd.to_csv(pathfilename, index=False)
-        print(pathfilename, 'gravado com', len(dfcdd['COURSE']), 'cursos')
+        dfccd.to_csv(pathfilename, index=False)
+        print(pathfilename, 'gravado com', len(dfccd['COURSE']), 'cursos')
 
 
 
