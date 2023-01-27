@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be5d540f-232d-470b-82ce-b361bae5cb47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/PET-Pentaho.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0266043277510432_prods.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0266043277510432_proj_dev.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/0342261677880699_proj_dev.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_advis.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_ccd.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_ensdisc.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_fullname.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_ldp.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_livro.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_period.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_ppe.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_proj_dev.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_proj_ens.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5161255861654045_pt.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_ccd.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_ensdisc.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_fullname.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_ldp.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_ppe.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_prods.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_proj_dev.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5801095813547312_proj_ens.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cursos_de_curta_duracao_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linhas_de_pesquisa_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/livros_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/livros_uniq.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/premios_ou_titulos_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/producoes_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projetos_ensino_all.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../newsMerges.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/0113326674939174.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/0272195475395135.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/1310087115891977.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/1391494412451943.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/2109694447592194.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/2959168271554057.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/2998997633579495.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/3539280723617206.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/4130904316753095.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/4364517952689670.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/4651010046727324.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/4859954265517956.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/5134397331258110.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/5293927608955859.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/5546309333034464.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/5801095813547312.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/5862330768739698.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/6137784444858483.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/6572768680723506.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/6694205854000137.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/6745827031682849.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/7304349084200954.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/7826684861425562.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/7875596096391115.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/8270586608361536.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/8321550132839963.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/8513681122536513.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/8727341617324704.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/8797260915259688.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/8906871277313848.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/8922901056006734.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml_zip/9495095657458240.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/rafatieppo-lucylattes-163c86e.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/rafatieppo-lucylattes-163c86e.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ensdisc_all.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ensdisc_all.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fullname_all.csv" beforeDir="false" afterPath="$PROJECT_DIR$/fullname_all.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orientacoes_all.csv" beforeDir="false" afterPath="$PROJECT_DIR$/orientacoes_all.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/periodicos_all.csv" beforeDir="false" afterPath="$PROJECT_DIR$/periodicos_all.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/periodicos_nointer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/periodicos_nointer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/periodicos_uniq.csv" beforeDir="false" afterPath="$PROJECT_DIR$/periodicos_uniq.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetos_all.csv" beforeDir="false" afterPath="$PROJECT_DIR$/projetos_all.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetos_uniq.csv" beforeDir="false" afterPath="$PROJECT_DIR$/projetos_uniq.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../list_id_name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../list_id_name.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lucyLattes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../lucyLattes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../novosGets.py" beforeDir="false" afterPath="$PROJECT_DIR$/../novosGets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../relatorio/extrato_periodico_autorqualis.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../relatorio/extrato_periodico_autorqualis.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../relatorio/figures/capitulos_dep_year.png" beforeDir="false" afterPath="$PROJECT_DIR$/../relatorio/figures/capitulos_dep_year.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../relatorio/figures/livros_dep_year.png" beforeDir="false" afterPath="$PROJECT_DIR$/../relatorio/figures/livros_dep_year.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../relatorio/figures/period_dep_year.png" beforeDir="false" afterPath="$PROJECT_DIR$/../relatorio/figures/period_dep_year.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../relatorio/figures/period_year_qualis.png" beforeDir="false" afterPath="$PROJECT_DIR$/../relatorio/figures/period_year_qualis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../relatorio/relatorio_producao.html" beforeDir="false" afterPath="$PROJECT_DIR$/../relatorio/relatorio_producao.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scraperlattes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../scraperlattes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tidydf.py" beforeDir="false" afterPath="$PROJECT_DIR$/../tidydf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xml_zip/5161255861654045.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../xml_zip/5161255861654045.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xml_zip/7811242577429090.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../xml_zip/7811242577429090.zip" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2KslTvLhsOrfObz4smbPot9rsgN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be5d540f-232d-470b-82ce-b361bae5cb47" name="Changes" comment="" />
+      <created>1674771183879</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674771183879</updated>
+    </task>
+    <servers />
+  </component>
+</project>
