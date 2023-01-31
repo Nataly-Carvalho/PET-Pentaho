@@ -1285,8 +1285,6 @@ def getpremio(zipname):
               len(df_pt['TITULO']), ' premios e titulos')
 
 
-
-
 def getProjs(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
@@ -1372,10 +1370,6 @@ def getProjs(zipname):
                         if ccc == '':
                             ccc = 'ATUAL'
                         ls_dev_yfin.append(ccc)
-
-
-
-
         df_projEns = pd.DataFrame({'PROJETO':ls_ens_nome,
                                    'DESCRICAO':ls_ens_desc,
                                    'SITUACAO':ls_ens_sit,
@@ -1394,7 +1388,7 @@ def getProjs(zipname):
         latid = zipname.split('.')[0]
         pathfilename = str('./csv_producao/' + latid + '_proj_dev'  '.csv')
         df_projDev.to_csv(pathfilename, index=False)
-        print(pathfilename, 'gravado com ', len(df_projDev['PROJETO']), 'projetos de desenvolvimento')
+        print(pathfilename, 'gravado com ', len(df_projDev['DESCRICAO']), 'projetos de desenvolvimento')
 
 
 def getProducoes(zipname):
@@ -1888,5 +1882,3 @@ def getBancas(zipname):
         #pathfilename = str('./csv_producao/' + latid + '_bancas' '.csv')
         #df_bancas.to_csv(pathfilename, index=False)
         #print(pathfilename, 'gravando com', len(df_bancas['NATUREZA']), 'bancas')
-
-

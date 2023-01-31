@@ -1,3 +1,6 @@
+'''def getpremio(zipname):
+    zipfilepath = './xml_zip' + '/'+ str(zipname)
+
 import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -59,7 +62,6 @@ def getLinhasPesq(zipname):
             app = ap[i].find_all('pesquisa-e-desenvolvimento')
             if len(app) == 0:
                 print('linhas de pesquisas não encontradas')
-
             else:
                 for j in range(len(pt)):
                     prem = pt[j].find_all('premio-titulo')
@@ -168,8 +170,7 @@ def getProjEns(zipname):
                             ccc = 'ATUAL'
                         ls_yfin.append(ccc)
 
-
-'''def getProducoes(zipname):
+def getProducoes(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
     lattesxmldata = archive.open('curriculo.xml')
@@ -207,7 +208,7 @@ def getProjEns(zipname):
         pathfilename = str('./csv_producao/' + latid + '_prods' '.csv')
         df_prods.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com', len(df_prods['TITULO']), 'producoes de CT')
-        '''
+
 def projDev(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')
@@ -225,6 +226,4 @@ def projDev(zipname):
         ls_sit = []
 
         for i in range(len)
-
-
-
+'''

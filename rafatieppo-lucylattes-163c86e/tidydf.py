@@ -386,7 +386,6 @@ def gettidydf():
     ##################################################
     # ---------------PROJETOS DE ENSINO--------------#
     ##################################################
-
     lscsv_pen = glob.glob('./csv_producao/*_proj_ens.csv')
     dfpen = pd.DataFrame()
     lsid = []
@@ -435,6 +434,7 @@ def gettidydf():
     dfccd.to_csv(pathfilename, index=False)
     print(pathfilename, 'gravadp com', len(dfccd['COURSE']), 'cursos de curta duracao')
 
+
     ##############################################################
     #-------------------------Patentes---------------------------#
     ##############################################################
@@ -453,25 +453,39 @@ def gettidydf():
     lscsv_nomes_autores = glob.glob('./csv_producao/*_autores_pat.csv')
     len(lscsv_nomes_autores)
     dfnomesautores = pd.DataFrame()
-    #for i in range(len(lscsv_nomes_autores)):
-    #    a = pd.read_csv(lscsv_nomes_autores[i], header=0, dtype='str')
-    #    dfnomesautores = dfnomesautores.append(a, ignore_index=False)
-    #    iiid = fun_idd_unixwind(plat_sys, lscsv_nomes_autores, i)
-    #    idrep = np.repeat(iiid, len(a['COD_PATENTE_AUTORIA']))
-    #    lssid.append(idrep)
-    #dfnomesautores['ID'] = np.concatenate(lssid)
-    #dfpatente = pd.merge(dfpatente, dfnomesautores, on='ID')
+    dfpatente = pd.merge(dfpatente, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/patentes_all.csv')
+    dfpatente.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfpatente['TITULO']), 'patentes')
+
+    ###########################################################
+    # ---------------PROJETOS DE DESENVOLVIMENTO--------------#
+    ###########################################################
+    lscsv_prodev = glob.glob('./csv_producao/*_proj_dev.csv')
+    dfdev = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_prodev)):
+        a = pd.read_csv(lscsv_prodev[i], header=0)
+        dfdev = dfdev.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_prodev, i)
+        idrep = np.repeat(iid, len(a['DESCRICAO']))
+        lsid.append(idrep)
+    dfdev['ID'] = np.concatenate(lsid)
     lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
     len(lscsv_fullname)
     dffullname = pd.DataFrame()
     for i in range(len(lscsv_fullname)):
         a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
         dffullname = dffullname.append(a, ignore_index=False)
-    dfpatente = pd.merge(dfpatente,dffullname, on='ID')
+    dfdev = pd.merge(dfdev, dffullname, on='ID')
     dffullname = dffullname.reset_index(drop=True)
-    pathfilename = str('./csv_producao/patentes_all.csv')
-    dfpatente.to_csv(pathfilename, index=False)
-    print(pathfilename, 'gravado com', len(dfpatente['TITULO']), 'patentes')
+    pathfilename = str('./csv_producao/projetos_desenvol_all.csv')
+    dfdev.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfdev['DESCRICAO']), 'projetos de desenvolvimento')
+
+
+
 
 
 
