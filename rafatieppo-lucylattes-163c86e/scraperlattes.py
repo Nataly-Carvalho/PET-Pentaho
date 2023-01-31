@@ -1455,7 +1455,7 @@ def getPatentes(zipname):
         ls_nome_autores = []
         ls_nome_citacao_autores = []
         ls_ordem_autoria = []
-        ls_numero_cnpq = []
+
 
 
         for i in range(len(patente)):
@@ -1502,7 +1502,7 @@ def getPatentes(zipname):
                 result = re.search('instituicao-deposito-registro=\"(.*)\" nome-do-depositante',dados_basicos)
                 cc = fun_result(result)
                 ls_instituicao_deposito_registro.append(cc)
-        nro = ''
+
         nome = ''
         nomecit = ''
 
@@ -1519,33 +1519,15 @@ def getPatentes(zipname):
                 result = re.search('nome-para-citacao="(.*)" nro', aut)
                 cc = fun_result(result)
 
-                nomecit = nomecit+cc + ';'
-                result = re.search('nro-id-cnpq="(.*)" ordem-d', aut)
-                cc = fun_result(result)
 
-                nro =nro + cc+';'
 
             ls_nome_autores.append(nome)
             ls_nome_citacao_autores.append(nomecit)
-            ls_numero_cnpq.append(nro)
-            print(ls_numero_cnpq)
-            print(ls_nome_citacao_autores)
-            print(ls_numero_cnpq)
 
 
-        #print(ls_titulo)
-        #print(ls_categoria)
-        #print(ls_ano)
-        #print(ls_tipo)
-        #print(ls_nome_autores)
-        #print(ls_numero_cnpq)
 
-        #print(ls_nome_citacao_autores)
-        #print(ls_instituicao_deposito_registro)
-        #print(ls_data_pedido_deposito)
-        #print(ls_codigo)
-        #print(ls_instituicao_financiadora)
-        #print(ls_pais)
+
+
         df_patentes = pd.DataFrame({'TITULO':ls_titulo,
                                     'ANO':ls_ano,
                                     'PAIS':ls_pais,
@@ -1557,8 +1539,7 @@ def getPatentes(zipname):
                                     'INSTITUICAO_DEPOSITO':ls_instituicao_deposito_registro,
                                     'NOME_AUTOR': ls_nome_autores,
                                     'NOME_CITACAO': ls_nome_citacao_autores,
-                                    'NUMERO_CNPQ': ls_numero_cnpq
-                                     })
+                                    })
         latid = zipname.split('.')[0]
         pathfilename = str('./csv_producao/'+latid+'_patentes' '.csv')
         df_patentes.to_csv(pathfilename, index=False)
