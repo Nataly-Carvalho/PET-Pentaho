@@ -434,6 +434,31 @@ def gettidydf():
     dfccd.to_csv(pathfilename, index=False)
     print(pathfilename, 'gravadp com', len(dfccd['COURSE']), 'cursos de curta duracao')
 
+
+    ##############################################################
+    #-------------------------Patentes---------------------------#
+    ##############################################################
+
+    lscsv_patente = glob.glob('./csv_producao/*_patentes.csv')
+    dfpatente  = pd.DataFrame()
+    lsid = []
+    lssid = []
+    for i in range(len(lscsv_patente)):
+        a = pd.read_csv(lscsv_patente[i], header=0)
+        dfpatente = dfpatente.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_patente, i)
+        idrep = np.repeat(iid, len(a['TITULO']))
+        lsid.append(idrep)
+    dfpatente['ID'] = np.concatenate(lsid)
+    lscsv_nomes_autores = glob.glob('./csv_producao/*_autores_pat.csv')
+    len(lscsv_nomes_autores)
+    dfnomesautores = pd.DataFrame()
+    dfpatente = pd.merge(dfpatente, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/patentes_all.csv')
+    dfpatente.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfpatente['TITULO']), 'patentes')
+
     ###########################################################
     # ---------------PROJETOS DE DESENVOLVIMENTO--------------#
     ###########################################################
@@ -458,4 +483,11 @@ def gettidydf():
     pathfilename = str('./csv_producao/projetos_desenvol_all.csv')
     dfdev.to_csv(pathfilename, index=False)
     print(pathfilename, 'gravado com', len(dfdev['DESCRICAO']), 'projetos de desenvolvimento')
+
+
+
+
+
+
+
 

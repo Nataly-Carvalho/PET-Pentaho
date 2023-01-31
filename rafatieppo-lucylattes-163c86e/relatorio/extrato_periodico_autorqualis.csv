@@ -1,4 +1,66 @@
-,FULL_NAME,YEAR,XX
-0,Henrique Braga Foresti,2011.0,1
-1,Henrique Braga Foresti,2012.0,1
-2,Tatalina Cristina Silva de Oliveira,2016.0,1
+,FULL_NAME,YEAR,A1,A2,B1,B5,XX
+0,Ana Carolina Candido de Melo,2019.0,0.0,0.0,0.0,0.0,1.0
+1,Andréa Gomes dos Santos,2010.0,0.0,0.0,0.0,1.0,0.0
+2,Beatriz Leandro Bonafini,2012.0,0.0,0.0,0.0,1.0,0.0
+3,Beatriz Leandro Bonafini,2016.0,0.0,0.0,0.0,0.0,3.0
+4,Beatriz Leandro Bonafini,2017.0,0.0,0.0,0.0,0.0,2.0
+5,Camille Nascimento Santiago Caminha,2018.0,0.0,0.0,0.0,0.0,2.0
+6,Denny Anderson Farias Costa,2019.0,0.0,0.0,0.0,0.0,1.0
+7,Diego de Freitas Bezerra,2019.0,0.0,0.0,0.0,1.0,0.0
+8,Erico Souza Teixeira,2011.0,0.0,0.0,0.0,0.0,1.0
+9,Erico Souza Teixeira,2015.0,1.0,0.0,0.0,0.0,0.0
+10,Erico Souza Teixeira,2016.0,0.0,0.0,0.0,0.0,1.0
+11,Erico Souza Teixeira,2017.0,1.0,0.0,0.0,0.0,0.0
+12,Erico Souza Teixeira,2018.0,0.0,0.0,0.0,0.0,1.0
+13,Erico Souza Teixeira,2019.0,1.0,0.0,0.0,0.0,0.0
+14,Eronides Felisberto da Silva Neto,2015.0,0.0,0.0,0.0,0.0,1.0
+15,Fernando Ferreira de Carvalho,2014.0,0.0,0.0,0.0,0.0,2.0
+16,Georgina Venancio de Queiroz,2015.0,0.0,0.0,0.0,0.0,1.0
+17,Guilherme Fernando Cavalcanti Pereira,2014.0,0.0,0.0,0.0,0.0,1.0
+18,Helda Oliveira Barros,2012.0,0.0,0.0,0.0,0.0,2.0
+19,Henrique Braga Foresti,2011.0,0.0,0.0,0.0,0.0,1.0
+20,Henrique Braga Foresti,2012.0,0.0,0.0,0.0,0.0,1.0
+21,Ioram Schechtman Sette,2012.0,0.0,0.0,0.0,0.0,1.0
+22,Ioram Schechtman Sette,2017.0,0.0,0.0,0.0,0.0,2.0
+23,Joao Paulo Magalhaes,2014.0,0.0,0.0,0.0,0.0,1.0
+24,Luiz Fernando Fonsêca Pinheiro de Lima,2019.0,0.0,0.0,0.0,0.0,1.0
+25,Luiz Francisco Alves de Araujo,2014.0,0.0,0.0,0.0,0.0,1.0
+26,Luiz Francisco Alves de Araujo,2015.0,0.0,0.0,0.0,0.0,2.0
+27,Luiz Francisco Alves de Araujo,2016.0,0.0,0.0,0.0,0.0,1.0
+28,Marcelo Penha,2010.0,0.0,0.0,0.0,0.0,1.0
+29,Marcelo Penha,2011.0,0.0,0.0,0.0,0.0,1.0
+30,Marcelo Penha,2014.0,0.0,0.0,0.0,0.0,1.0
+31,Marcelo Penha,2015.0,0.0,0.0,0.0,0.0,1.0
+32,Marcelo Penha,2018.0,0.0,0.0,0.0,0.0,1.0
+33,Marcelo Penha,2019.0,0.0,0.0,0.0,0.0,1.0
+34,Marcos de Souza Oliveira,2016.0,0.0,0.0,0.0,0.0,1.0
+35,Nilson Valdevino Soares,2017.0,0.0,0.0,0.0,0.0,1.0
+36,Rafael Ferreira Leite de Mello,2010.0,0.0,0.0,0.0,0.0,1.0
+37,Rafael Ferreira Leite de Mello,2012.0,1.0,0.0,0.0,0.0,2.0
+38,Rafael Ferreira Leite de Mello,2013.0,2.0,0.0,0.0,0.0,0.0
+39,Rafael Ferreira Leite de Mello,2014.0,1.0,0.0,0.0,0.0,0.0
+40,Rafael Ferreira Leite de Mello,2016.0,1.0,0.0,1.0,0.0,0.0
+41,Rafael Ferreira Leite de Mello,2017.0,0.0,0.0,1.0,0.0,2.0
+42,Rafael Ferreira Leite de Mello,2018.0,0.0,0.0,0.0,0.0,2.0
+43,Rafael Ferreira Leite de Mello,2019.0,0.0,0.0,0.0,0.0,4.0
+44,Ricardo Araújo Costa,2011.0,0.0,0.0,0.0,0.0,2.0
+45,Ricardo Cesar de Andrade,2013.0,0.0,0.0,0.0,0.0,1.0
+46,Ricardo Cesar de Andrade,2015.0,0.0,0.0,0.0,1.0,0.0
+47,Ricardo Cesar de Andrade,2016.0,0.0,1.0,0.0,0.0,0.0
+48,Rodrigo Diego Melo Amorim,2015.0,0.0,0.0,0.0,0.0,1.0
+49,Tatalina Cristina Silva de Oliveira,2016.0,0.0,0.0,0.0,0.0,1.0
+50,Tatyane Souza Calixto da Silva,2015.0,0.0,0.0,0.0,0.0,1.0
+51,Tatyane Souza Calixto da Silva,2016.0,0.0,0.0,0.0,0.0,1.0
+52,Tatyane Souza Calixto da Silva,2018.0,0.0,0.0,0.0,0.0,1.0
+53,Tatyane Souza Calixto da Silva,2019.0,0.0,0.0,0.0,0.0,1.0
+54,Vitor Casadei,2017.0,1.0,0.0,0.0,0.0,0.0
+55,Walquíria Castelo Branco Lins,2011.0,0.0,0.0,0.0,0.0,1.0
+56,Walquíria Castelo Branco Lins,2013.0,0.0,0.0,0.0,0.0,2.0
+57,Walquíria Castelo Branco Lins,2014.0,0.0,0.0,0.0,1.0,1.0
+58,Walquíria Castelo Branco Lins,2015.0,0.0,0.0,0.0,0.0,1.0
+59,Walquíria Castelo Branco Lins,2016.0,0.0,0.0,0.0,0.0,2.0
+60,Walquíria Castelo Branco Lins,2017.0,0.0,0.0,0.0,0.0,3.0
+61,Walquíria Castelo Branco Lins,2019.0,0.0,0.0,0.0,0.0,1.0
+62,Yvana Oliveira de Alencastro,2016.0,0.0,0.0,0.0,0.0,1.0
+63,Yvana Oliveira de Alencastro,2018.0,0.0,0.0,0.0,0.0,1.0
+64,Yvana Oliveira de Alencastro,2019.0,0.0,0.0,0.0,1.0,0.0

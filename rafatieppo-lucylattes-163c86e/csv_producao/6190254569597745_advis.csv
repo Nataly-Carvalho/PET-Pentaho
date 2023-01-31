@@ -1,0 +1,85 @@
+YEAR,NATURE,INSTITUTION,COURSE,STUDENT,TYPE,SPONSOR
+2018,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Maverick Andre Dionisio Ferreira,ORIENTADOR_PRINCIPAL,SIM
+2018,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Anderson Pinheiro Cavalcanti,ORIENTADOR_PRINCIPAL,SIM
+2018,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Roberto Márcio Mota de Lima,ORIENTADOR_PRINCIPAL,SIM
+2019,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Vitor Belarmino Rolim,ORIENTADOR_PRINCIPAL,SIM
+2017,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Valter dos Santos Mendonca Neto,CO_ORIENTADOR,NAO
+2016,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Biometria e Estatística Aplicada,Elaine Cristina Moreira Marques,ORIENTADOR_PRINCIPAL,SIM
+2017,Dissertação de mestrado,Universidade Federal de Alagoas,Informática,Sebastião Rogério da Silva Neto,CO_ORIENTADOR,SIM
+2021,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Arthur Diego,ORIENTADOR_PRINCIPAL,SIM
+2020,Dissertação de mestrado,Centro de Estudos e Sistemas Avançados do Recife,Engenharia de Software,Helton Santa Cruz Solto,CO_ORIENTADOR,NAO
+2020,Dissertação de mestrado,Centro de Estudos e Sistemas Avançados do Recife,Engenharia de Software,Jair Bogo,CO_ORIENTADOR,NAO
+2020,Dissertação de mestrado,Centro de Estudos e Sistemas Avançados do Recife,Engenharia de Software,Alfeu Buriti Pereira Júnior,ORIENTADOR_PRINCIPAL,NAO
+2021,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Franciely Alves,ORIENTADOR_PRINCIPAL,SIM
+2020,Dissertação de mestrado,Universidade Federal Rural de Pernambuco,Informática Aplicada,Bruno Brito,ORIENTADOR_PRINCIPAL,NAO
+2021,Dissertação de mestrado,Centro de Estudos e Sistemas Avançados do Recife,Engenharia de Software,Antônio Moraes,ORIENTADOR_PRINCIPAL,NAO
+2019,Dissertação de mestrado,Centro de Estudos e Sistemas Avançados do Recife,Engenharia de Software,Francisco Assis,ORIENTADOR_PRINCIPAL,NAO
+2021,Dissertação de mestrado,Universidade Federal de Santa Catarina,Tecnologias da Informação e Comunicação,Thais Fernanda Scheneider,CO_ORIENTADOR,NAO
+2022,Dissertação de mestrado,Universidade Federal de Santa Catarina,Pós-Graduação em Tecnologias da Informação e Comunicação,Thaís Fernanda Scheneider,CO_ORIENTADOR,NAO
+2022,Dissertação de mestrado,Centro de Estudos e Sistemas Avançados do Recife,Engenharia de Software,Denisson Paulo de Albuquerque,ORIENTADOR_PRINCIPAL,NAO
+2020,Dissertação de mestrado,Centro de Estudos e Sistemas Avançados do Recife,Engenharia de Software,Antônio Moreira da Silva Filho,CO_ORIENTADOR,NAO
+2016,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Vitor Berlamino Rolim,CO_ORIENTADOR,NAO
+2016,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Philippe César dos Santos Oliveira,CO_ORIENTADOR,SIM
+2016,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Diógenes Luiz Oliveira de Azevedo,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Alan Batista de Castro,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Alan Monteiro de Lima,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Alan Monteiro de Lima,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Bruno Tabosa Azevedo dos Santos,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Cleberson Barbosa de Chagas,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Dayanne Cristina de Araújo Barbosa,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Dennys Edward Lucena de Oliveira,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Dennys Edward Lucena de Oliveira,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Dennys de Souza Barros,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Dennys de Souza Barros,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Diógenes José Carvalho da Silva,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Diogo Felipe Felix de Melo,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Glauber Henrique Camêlo Batista,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Glauber Henrique Camêlo Batista,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Gleidson Araújo de Souza Campos,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Gleidson Araújo de Souza Campos,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Ítalo Egypto Nascimento Pinto,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Ítalo Egypto Nascimento Pinto,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Luiz Orlando Pereira Braga,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Luiz Orlando Pereira Braga,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Marco Antônio de Souze Segundo,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Márdeni Ferreira de Souza Sá,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Márdeni Ferreira de Souza Sá,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Pedro Pires Barreto,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Pedro Pires Barreto,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Thaís Antunes Bione,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Thaís Antunes Bione,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Vitor Belarmino Rolim,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Vitor Belarmino Rolim,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Vitor de Albuquerque Torreão,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Vitor de Albuquerque Torreão,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,,Ricardo Dantas de Oliveira,CO_ORIENTADOR,NAO
+2016,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Vitor Belarmino Rolim,CO_ORIENTADOR,NAO
+2016,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Diógenes Luiz Oliveira de Azevedo,CO_ORIENTADOR,NAO
+2017,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Viviane Araújo,CO_ORIENTADOR,SIM
+2017,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Philippe Cesar dos Santos Oliveira,CO_ORIENTADOR,NAO
+2017,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Lucas Dornelles Barbosa Maia,CO_ORIENTADOR,NAO
+2017,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Anderson Mateus da Silva,CO_ORIENTADOR,NAO
+2017,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Rafaella Ferreira do Vale,CO_ORIENTADOR,NAO
+2017,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Lucas de Holanda Vieria Rocha,CO_ORIENTADOR,NAO
+2017,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Ricardo Dantes de Oliveira,CO_ORIENTADOR,NAO
+2015,ORIENTACAO-DE-OUTRA-NATUREZA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Nicolas Melo de Oliveira,CO_ORIENTADOR,NAO
+2019,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Sistema de Informação,Rotson Albuquerque,CO_ORIENTADOR,NAO
+2019,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Raissa Camelo,CO_ORIENTADOR,SIM
+2019,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Gian Barbosa,CO_ORIENTADOR,SIM
+2019,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,João Uchoa,CO_ORIENTADOR,NAO
+2019,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Samuel Justino,CO_ORIENTADOR,SIM
+2020,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,LUCAS FRANCISCO PEREIRA DE GOIS CORREIA,CO_ORIENTADOR,SIM
+2020,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,SAMUEL JUSTINO,CO_ORIENTADOR,SIM
+2020,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,LUCAS FRANCISCO PEREIRA DE GOIS CORREIA,CO_ORIENTADOR,SIM
+2021,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Raissa Camelo Salhab,CO_ORIENTADOR,SIM
+2021,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Viviane Barbosa de Araújo,CO_ORIENTADOR,NAO
+2020,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Raissa Camelo Salhab,CO_ORIENTADOR,SIM
+2021,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Computação,SAMUEL JUSTINO,CO_ORIENTADOR,SIM
+2021,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Computação,André Felipe Alves Santiago,CO_ORIENTADOR,SIM
+2020,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,Ciência da Computação,Gian Felipe da Silva Barbosa,CO_ORIENTADOR,NAO
+2021,MONOGRAFIA_DE_CONCLUSAO_DE_CURSO_APERFEICOAMENTO_E_ESPECIALIZACAO,Universidade Federal Rural de Pernambuco,Especialização em Inteligência Computacional Aplicada,Ingrid Almeida,CO_ORIENTADOR,SIM
+2022,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,,Moesio Wenceslau da Silva Filho,CO_ORIENTADOR,NAO
+2022,INICIACAO_CIENTIFICA,Universidade Federal Rural de Pernambuco,,Abílio Nogueira Barros,CO_ORIENTADOR,NAO
+2022,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Fabio Mariano Costa Silva Gomes Pereira,CO_ORIENTADOR,NAO
+2022,TRABALHO_DE_CONCLUSAO_DE_CURSO_GRADUACAO,Universidade Federal Rural de Pernambuco,Ciência da Computação,Abílio Nogueira Barros,CO_ORIENTADOR,NAO
+2021,MONOGRAFIA_DE_CONCLUSAO_DE_CURSO_APERFEICOAMENTO_E_ESPECIALIZACAO,Universidade Federal Rural de Pernambuco,Especialização em Inteligência Computacional Aplicada,Deivinson Severino,CO_ORIENTADOR,SIM
