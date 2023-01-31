@@ -1435,6 +1435,143 @@ def getProducoes(zipname):
         pathfilename = str('./csv_producao/' + latid + '_prods' '.csv')
         df_prods.to_csv(pathfilename, index=False)
         print(pathfilename, 'gravado com', len(df_prods['TITULO']), 'producoes de CT')
+
+def getPatentes(zipname):
+
+
+    zipfilepath = './xml_zip' + '/' + str(zipname)
+    archive = zipfile.ZipFile(zipfilepath, 'r')
+    lattesxmldata = archive.open('curriculo.xml')
+    soup = BeautifulSoup(lattesxmldata, 'lxml',
+                         from_encoding='ISO-8859-1')
+
+    patente = soup.find_all('patente')
+    if len(patente) == 0:
+        print('não foram encontradas patentes')
+    else:
+        ls_titulo = []
+        ls_ano = []
+        ls_pais = []
+        ls_instituicao_financiadora = []
+        ls_categoria = []
+        ls_tipo = []
+        ls_codigo = []
+        ls_data_pedido_deposito = []
+        ls_instituicao_deposito_registro = []
+        ls_nome_autores = []
+        ls_nome_citacao_autores = []
+        ls_ordem_autoria = []
+        ls_numero_cnpq = []
+
+
+        for i in range(len(patente)):
+            dbp = str(patente[i])
+
+            result = re.search('titulo=\"(.*)\" titulo-i',dbp)
+            cc = fun_result(result)
+            ls_titulo.append(cc)
+
+            result = re.search('ano-desenvolvimento=\"(.*)\" flag-p', dbp)
+            cc = fun_result(result)
+            ls_ano.append(cc)
+
+            result = re.search('pais="(.*)" titulo="', dbp)
+            cc = fun_result(result)
+            ls_pais.append(cc)
+
+        for i in range(len(patente)):
+            ddps = patente[i].find_all('detalhamento-da-patente')
+            ddp = str(patente[i])
+
+            result = re.search('instituicao-financiadora=\"(.*)\" >', dbp)
+            cc = fun_result(result)
+            ls_instituicao_financiadora.append(cc)
+
+            result = re.search('categoria=\"(.*)\" finalidade="', dbp)
+            cc = fun_result(result)
+            ls_categoria.append(cc)
+
+            for j in range(len(ddps)):
+                dados_basicos = str(ddps[j])
+                result = re.search('tipo-patente=\"(.*)\" titulo-patente="',dados_basicos)
+                cc = fun_result(result)
+                ls_tipo.append(cc)
+
+                result = re.search('codigo-do-registro-ou-patente=\"(.*)\" data-de-concessao',dados_basicos)
+                cc = fun_result(result)
+                ls_codigo.append(cc)
+
+                result = re.search('data-pedido-de-deposito=\"(.*)\" finalidade',dados_basicos)
+                cc = fun_result(result)
+                ls_data_pedido_deposito.append(cc)
+
+                result = re.search('instituicao-deposito-registro=\"(.*)\" nome-do-depositante',dados_basicos)
+                cc = fun_result(result)
+                ls_instituicao_deposito_registro.append(cc)
+        nro = ''
+        nome = ''
+        nomecit = ''
+
+        for i in range(len(patente)):
+            autores = patente[i].find_all('autores')
+
+            for j in range(len(autores)):
+                aut = str(autores[j])
+
+                result = re.search('nome-completo-do-autor="(.*)" nome-p', aut)
+                cc = fun_result(result)
+
+                nome = nome+ cc + ';'
+                result = re.search('nome-para-citacao="(.*)" nro', aut)
+                cc = fun_result(result)
+
+                nomecit = nomecit+cc + ';'
+                result = re.search('nro-id-cnpq="(.*)" ordem-d', aut)
+                cc = fun_result(result)
+
+                nro =nro + cc+';'
+
+            ls_nome_autores.append(nome)
+            ls_nome_citacao_autores.append(nomecit)
+            ls_numero_cnpq.append(nro)
+            print(ls_numero_cnpq)
+            print(ls_nome_citacao_autores)
+            print(ls_numero_cnpq)
+
+
+        #print(ls_titulo)
+        #print(ls_categoria)
+        #print(ls_ano)
+        #print(ls_tipo)
+        #print(ls_nome_autores)
+        #print(ls_numero_cnpq)
+
+        #print(ls_nome_citacao_autores)
+        #print(ls_instituicao_deposito_registro)
+        #print(ls_data_pedido_deposito)
+        #print(ls_codigo)
+        #print(ls_instituicao_financiadora)
+        #print(ls_pais)
+        df_patentes = pd.DataFrame({'TITULO':ls_titulo,
+                                    'ANO':ls_ano,
+                                    'PAIS':ls_pais,
+                                    'INSTITUICAO_FINANCIADORA':ls_instituicao_financiadora,
+                                    'CATEGORIA':ls_categoria,
+                                    'TIPO':ls_tipo,
+                                    'CODIGO':ls_codigo,
+                                    'DATA_PEDIDO_DEPOSITO':ls_data_pedido_deposito,
+                                    'INSTITUICAO_DEPOSITO':ls_instituicao_deposito_registro,
+                                    'NOME_AUTOR': ls_nome_autores,
+                                    'NOME_CITACAO': ls_nome_citacao_autores,
+                                    'NUMERO_CNPQ': ls_numero_cnpq
+                                     })
+        latid = zipname.split('.')[0]
+        pathfilename = str('./csv_producao/'+latid+'_patentes' '.csv')
+        df_patentes.to_csv(pathfilename, index=False)
+        print(pathfilename, 'gravado com', len(df_patentes['TITULO']), 'patentes')
+
+
+        
 def getBancas(zipname):
     zipfilepath = './xml_zip' + '/' + str(zipname)
     archive = zipfile.ZipFile(zipfilepath, 'r')

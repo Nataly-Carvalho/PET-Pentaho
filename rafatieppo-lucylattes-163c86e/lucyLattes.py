@@ -34,6 +34,7 @@ from scraperlattes import getBancas
 from scraperlattes import getProjs
 from scraperlattes import getpremio
 from scraperlattes import getProducoes
+from scraperlattes import getPatentes
 from remove_csvproducao import removeCsvProducao
 from tabulate import tabulate
 import pandas as pd
@@ -73,6 +74,7 @@ for nid in range(len(df_idlist)):
     getpremio(zipfilename)
     getProducoes(zipfilename)
     getBancas(zipfilename)
+    getPatentes(zipfilename)
 
 gettidydf()
 getverificacao()
