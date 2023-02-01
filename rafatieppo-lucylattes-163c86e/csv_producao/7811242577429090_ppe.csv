@@ -1,7 +1,0 @@
-PROJ,YEAR_INI,YEAR_FIN,NATUREZA,INTEGRANTES,COORDENA
-Dispositivo multi-interface para processadores x86,2008,2010,DESENVOLVIMENTO,"['Gabor Sipkoi Kellermann', 'José Rodrigues de Oliveira Neto', 'Geraldo Arruda']","['SIM', 'NAO', 'NAO']"
-Monitor de qualidade de rede eletrica com comunicacao bluetooth,2012,2013,DESENVOLVIMENTO,"['Gabor Sipkoi Kellermann', 'Estevão Zuppardo Rufino', 'Michelle Augusta Vasconcelos Cavalcanti']","['SIM', 'NAO', 'NAO']"
-Módulo de comunicação serial para CLP,2007,2008,DESENVOLVIMENTO,['Gabor Sipkoi Kellermann'],['SIM']
-Desenvolvimento de soluções embarcadas para automação bancária,2010,2013,DESENVOLVIMENTO,"['Gabor Sipkoi Kellermann', 'Leandro Honorato Silva', 'Felipe Bartolomeu Lemos Alves', 'Lara Dantas Coutinho', 'Flávio José de Melo Souza', 'Hilton de Oliveira Lima', 'Dagoberto Santos', 'José Rodrigues de Oliveira Neto']","['SIM', 'NAO', 'NAO', 'NAO', 'NAO', 'NAO', 'NAO', 'NAO']"
-Dispositivo IoT para auxilio ao diagnóstico de bruxismo,2019,2021,DESENVOLVIMENTO,['Gabor Sipkoi Kellermann'],['SIM']
-Dispositivo IoT para monitor consumo de oxigenio medicinal,2020,2021,DESENVOLVIMENTO,['Gabor Sipkoi Kellermann'],['SIM']

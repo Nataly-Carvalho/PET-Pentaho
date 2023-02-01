@@ -1,7 +1,0 @@
-PROJETO,DESCRICAO,SITUACAO,ANO_INICIO,ANO_FIM
-Dispositivo multi-interface para processadores x86,"Implementação, em FPGA, de um conjunto de interfaces para acesso de um processador x86 a dispositivos diversos. Este sistema foi implementado em um FPGA. Foram implementadas, entre outras, as seguintes interfaces: UART, SPI, PWM, dual ethernet com chaveamento automatico em caso de perda de comunicação e IRIG.",CONCLUIDO,2008,2010
-Monitor de qualidade de rede eletrica com comunicacao bluetooth,Coordenação técnica de um projeto de desenvolvimento de um produto com capacidade de monitorar a qualidade da rede elétrica e enviar dados sobre este monitoramento através de Bluetooth para computadores e celulares.,CONCLUIDO,2012,2013
-Módulo de comunicação serial para CLP,Desenvolvimento do firmware de um módulo de comunicação para CLPs. O firmware foi desenvolvido em linguagem assembly do processador 8051.,CONCLUIDO,2007,2008
-Desenvolvimento de soluções embarcadas para automação bancária,"Desenvolvimento de soluções de hardware e firmware para sistemas de automação bancaria. Desenvolvimento de placas de circuito impresso de até 6 camadas, elaboração de esquemas elétricos e de firmware de tempo real.",CONCLUIDO,2010,2013
-Dispositivo IoT para auxilio ao diagnóstico de bruxismo,,CONCLUIDO,2019,2021
-Dispositivo IoT para monitor consumo de oxigenio medicinal,Dispositivo embarcado para monitorar consumo de oxigênio medicinal em ambientes hospitalares e home care.,CONCLUIDO,2020,2021
