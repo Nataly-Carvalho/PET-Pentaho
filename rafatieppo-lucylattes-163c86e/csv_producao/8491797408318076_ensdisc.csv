@@ -1,7 +1,0 @@
-INSTITUTION,YEAR_INI,YEAR_FIN,MONTH_INI,MONTH_FIN,COURSE,TYPE,DISC
-União dos Institutos Brasileiros de Tecnologia,2005,01,01,01,Análise e desenvolvimento de sistemas,GRADUACAO,['Organização de Computadores']
-Faculdade Pernambucana,2005,08,08,08,Ciências da Computação,GRADUACAO,"['Práticas de Linguagem de Programação', 'Linguagem de Programação', 'Práticas de Linguagem de Montagem', 'Linguagem de Montagem']"
-Universidade de Pernambuco,2006,,ATUAL,ATUAL,Sistema de Informação,GRADUACAO,"['Arquitetura de Computadores', 'Banco de Dados II', 'Estágio Supervisionado', 'Linguagem de Programação II', 'Lógica de Programação II', 'Organização de Computadores', 'Sistemas Operacionais']"
-Faculdade de Filosofia Ciências e Letras de Caruaru,2006,08,08,08,Sistema de Informação,GRADUACAO,"['Metodologia da Pesquisa Científica', 'Linguagem de Programação Imperativa']"
-Faculdades Integradas Barros Melo,2006,07,07,07,Segurança em Redes de Computdores,POS-GRADUACAO,['Fundação de Sistemas Operacionais']
-Centro Univeristário Vale do Ipojuca,2016,,ATUAL,ATUAL,Analise e Desenvolvimento de Sistemas,GRADUACAO,['Algorítmos computacionais']

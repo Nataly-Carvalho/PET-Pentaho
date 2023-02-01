@@ -30,11 +30,17 @@ from index_capes import capes_indori
 from index_capes import capes_indautdis
 from index_capes import capes_distindproddp
 from scraperlattes import getLinhasPesq
-from scraperlattes import getBancas
 from scraperlattes import getProjs
 from scraperlattes import getpremio
 from scraperlattes import getProducoes
 from scraperlattes import getPatentes
+from scraperlattes import getBancas
+from scraperlattes import getTCC
+from scraperlattes import getGrad
+
+
+
+
 from remove_csvproducao import removeCsvProducao
 from tabulate import tabulate
 import pandas as pd
@@ -73,8 +79,10 @@ for nid in range(len(df_idlist)):
     getProjs(zipfilename)
     getpremio(zipfilename)
     getProducoes(zipfilename)
-    getBancas(zipfilename)
     getPatentes(zipfilename)
+    getBancas(zipfilename)
+    getTCC(zipfilename)
+    getGrad(zipfilename)
 
 gettidydf()
 getverificacao()
