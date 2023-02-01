@@ -484,10 +484,81 @@ def gettidydf():
     dfdev.to_csv(pathfilename, index=False)
     print(pathfilename, 'gravado com', len(dfdev['DESCRICAO']), 'projetos de desenvolvimento')
 
+ ###########################################################
+ # ---------------BANCA MESTRADO---------------------------#
+ ############################################################
+    lscsv_bancm = glob.glob('./csv_producao/*_bancMestre.csv')
+    dfbanc = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_bancm)):
+        a = pd.read_csv(lscsv_bancm[i], header=0)
+        dfbanc = dfbanc.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys,lscsv_bancm, i)
+        idrep = np.repeat(iid, len(a['NATUREZA']))
+        lsid.append(idrep)
+    dfbanc['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfbanc  = pd.merge(dfbanc , dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/bancas_mestrado_all.csv')
+    dfbanc.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfbanc ['NATUREZA']), 'bancasMestrado')
 
+ ###########################################################
+    # ---------------BANCA TCC---------------------------#
+ ############################################################
 
+    lscsv_bancesp = glob.glob('./csv_producao/*_bancaESPE.csv')
+    dfbanctcc = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_bancesp)):
+        a = pd.read_csv(lscsv_bancesp[i], header=0)
+        dfbanctcc = dfbanctcc.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_bancesp, i)
+        idrep = np.repeat(iid, len(a['NATUREZA']))
+        lsid.append(idrep)
+    dfbanctcc['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfbanctcc = pd.merge(dfbanctcc, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/bancas_tcc_all.csv')
+    dfbanctcc.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfbanctcc['NATUREZA']), 'banca_especializacao')
 
+    ###########################################################
+    # ---------------BANCA GRADUAÇÃO---------------------------#
+    ############################################################
 
-
+    lscsv_bangradu = glob.glob('./csv_producao/*_bancGRADU.csv')
+    dfbancgradu = pd.DataFrame()
+    lsid = []
+    for i in range(len(lscsv_bangradu)):
+        a = pd.read_csv(lscsv_bangradu[i], header=0)
+        dfbancgradu = dfbancgradu.append(a, ignore_index=False)
+        iid = fun_idd_unixwind(plat_sys, lscsv_bangradu, i)
+        idrep = np.repeat(iid, len(a['NATUREZA']))
+        lsid.append(idrep)
+    dfbancgradu['ID'] = np.concatenate(lsid)
+    lscsv_fullname = glob.glob('./csv_producao/*fullname.csv')
+    len(lscsv_fullname)
+    dffullname = pd.DataFrame()
+    for i in range(len(lscsv_fullname)):
+        a = pd.read_csv(lscsv_fullname[i], header=0, dtype='str')
+        dffullname = dffullname.append(a, ignore_index=False)
+    dfbancgradu = pd.merge(dfbancgradu, dffullname, on='ID')
+    dffullname = dffullname.reset_index(drop=True)
+    pathfilename = str('./csv_producao/bancas_graduacao_all.csv')
+    dfbancgradu.to_csv(pathfilename, index=False)
+    print(pathfilename, 'gravado com', len(dfbancgradu['NATUREZA']), 'banca_especializacao')
 
 

@@ -1,0 +1,33 @@
+INSTITUTION,YEAR_INI,YEAR_FIN,MONTH_INI,MONTH_FIN,COURSE,TYPE,DISC
+Faculdade Santa Helena,2006,07,07,07,Ciências Contábeis,GRADUACAO,['Marketing']
+Faculdade Santa Helena,2006,07,07,07,Administração,GRADUACAO,['Administração Mercadológica I e Administração Mercadológica II']
+Faculdade Santa Helena,2008,05,05,05,MBA Gestão de Pessoas,POS-GRADUACAO,"['Fundamentos do Marketing', 'Comportamento do Consumidor']"
+Faculdade Santa Helena,2008,12,12,12,Administração,GRADUACAO,"['Administração Mercadológica I', 'Administração Mercadológica II']"
+Faculdade Santa Helena,2008,07,07,07,Administração,GRADUACAO,['Administração Mercadológica II']
+Faculdade Santa Helena,2009,12,12,12,Administração,GRADUACAO,"['Administração Mercadológica I', 'Administração Mercadológica II']"
+Faculdade Santa Helena,2010,12,12,12,Administração,GRADUACAO,['Administração Mercadológica II']
+Faculdade Santa Helena,2010,07,07,07,Administração,GRADUACAO,['Administração Mercadológica II']
+Faculdade Santa Helena,2011,10,10,10,Pós Graduação em Comunicação e Marketing,POS-GRADUACAO,['Marketing de Serviços e de Relacionamento']
+Faculdade Santa Helena,2011,07,07,07,Administração,GRADUACAO,"['Administração Mercadológica II', 'Administração Mercadológica I']"
+Faculdade Santa Helena,2012,06,06,06,MBA em Gestão Empresarial,POS-GRADUACAO,['Marketing de Serviços e Relacionamento']
+Faculdade Santa Helena,2012,06,06,06,MBA em Gestão Empresarial,POS-GRADUACAO,['Marketing de Serviços e de Relacionamento']
+Faculdade Santa Helena,2012,12,12,12,Administração,GRADUACAO,"['Administração Mercadológica II', 'Administração Mercadológica I']"
+Centro de Desenvolvimento Pessoal e Empresarial,2013,10,10,10,MBA EXECUTIVO EM GESTÃO DE MARKETING &amp; VENDAS,POS-GRADUACAO,['Planejamento Estratégico de Marketing']
+Centro de Desenvolvimento Pessoal e Empresarial,2013,09,09,09,MBA EXECUTIVO EM GESTÃO DE MARKETING &amp; VENDAS,POS-GRADUACAO,['Planejamento Estratégico de Marketing']
+Faculdade Santa Helena,2013,07,07,07,Administração,GRADUACAO,['Administração Mercadológica I']
+Centro de Desenvolvimento Pessoal e Empresarial,2014,04,04,04,MBA EXECUTIVO EM GESTÃO DE MARKETING &amp; VENDAS,POS-GRADUACAO,['Introdução ao Marketing']
+Centro de Desenvolvimento Pessoal e Empresarial,2014,03,03,03,MBA EXECUTIVO EM GESTÃO DE MARKETING &amp; VENDAS,POS-GRADUACAO,['Planejamento Estratégico de Marketing']
+Centro de Desenvolvimento Pessoal e Empresarial,2014,07,07,07,MBA GESTÃO EMPRESARIAL,POS-GRADUACAO,['Como Organizar e Controlar o Departamento Comercial']
+Centro de Desenvolvimento Pessoal e Empresarial,2014,10,10,10,MBA EXECUTIVO EM GESTÃO DE MARKETING &amp; VENDAS,POS-GRADUACAO,['Planejamento Estratégico de Marketing']
+Centro de Desenvolvimento Pessoal e Empresarial,2015,05,05,05,MBA EXECUTIVO EM GESTÃO DE MARKETING &amp; VENDAS,POS-GRADUACAO,['Planejamento Estratégico de Marketing']
+Centro de Desenvolvimento Pessoal e Empresarial,2015,05,05,05,MBA GESTÃO EMPRESARIAL,POS-GRADUACAO,['Como organizar e controlar o setor comercial']
+Faculdade São Miguel,2016,10,10,10,MBA em Gestão Empresarial e de Serviços,POS-GRADUACAO,['Serviços e Atendimento ao Cliente']
+Faculdade São Miguel,2016,10,10,10,MBA em Gestão Empresarial e de Serviços,POS-GRADUACAO,['Serviços e Atendimento ao Cliente']
+Faculdade São Miguel,2017,09,09,09,MBA em Gestão Empresarial e de Serviços,POS-GRADUACAO,['Serviços e Atendimento ao Cliente']
+Faculdade São Miguel,2017,03,03,03,MBA em Gestão Empresarial e de Serviços,POS-GRADUACAO,['Serviços e Atendimento ao Cliente']
+Faculdade São Miguel,2018,06,06,06,MBA em Gestão Empresarial e de Serviços,POS-GRADUACAO,['Métodos e Técnicas de Pesquisa Científica']
+Faculdade São Miguel,2018,09,09,09,MBA Marketing Digital,POS-GRADUACAO,['Métodos e técnicas de pesquisa científica']
+Faculdade São Miguel,2018,06,06,06,MBA em Gestão de Recursos Humanos,POS-GRADUACAO,['Ética e Responsabilidade Social']
+Faculdade São Miguel,2018,05,05,05,MBA em Gestão Empresarial e de Serviços,POS-GRADUACAO,['Serviços e Atendimento ao Cliente']
+Universidade de Pernambuco,2019,01,01,01,Administração,GRADUACAO,"['Gestão', 'Desenvolvimento Empresarial']"
+CESAR School,2021,,ATUAL,ATUAL,Design,GRADUACAO,"['Projetos', 'Fundamentos de Projetos']"
