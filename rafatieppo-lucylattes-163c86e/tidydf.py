@@ -484,6 +484,7 @@ def gettidydf():
     dfdev.to_csv(pathfilename, index=False)
     print(pathfilename, 'gravado com', len(dfdev['DESCRICAO']), 'projetos de desenvolvimento')
 
+    
 
 
 

@@ -1,0 +1,5 @@
+PROJ,YEAR_INI,YEAR_FIN,NATUREZA,INTEGRANTES,COORDENA
+Intel XScale,2005,2005,DESENVOLVIMENTO,['Joao Paulo Magalhaes'],['SIM']
+"Grupo de pesquisa e desenvolvimento em Machine Learning, Visão Computacional e interfaces não convencionais do CESAR",2018,ATUAL,OUTRA,"['Joao Paulo Magalhaes', 'Henrique Borges Alencar Siqueira']","['SIM', 'NAO']"
+Smart Invoice,2018,ATUAL,DESENVOLVIMENTO,"['Joao Paulo Magalhaes', 'Edward Roe', 'Joyce Vitor Teixeira de Oliveira', 'Joao Lucas Oliveira Canhoto']","['SIM', 'NAO', 'NAO', 'NAO']"
+Document Server,2017,2017,DESENVOLVIMENTO,"['Joao Paulo Magalhaes', 'CAVALCANTI, GEORGE D. C.', 'Edward Roe', 'Tatiana Cruz Agra Lopes', 'Cristiane Nunes de Lima', 'Eldrey Seolin Galindo']","['SIM', 'NAO', 'NAO', 'NAO', 'NAO', 'NAO']"
