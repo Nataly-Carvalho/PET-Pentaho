@@ -28,6 +28,16 @@ Logo apos foi feito o tratamento de dados utilizando o pentaho padronizando todo
 
 ↬→→→→→→→→→→→→→→→→→→→→→→→→→•••••←←←←←←←←←←←←←←←←←←←←←←←←←←←←↫
 
+Apois isso foi realizado um dump com a database gerando o arquivo stage_pesq.sql usando o seguinte com:
+
+postgres  pg_dump -h localhost -p 5432 -U postgres stage_pesq > C:\stage_pesq.sql
+
+e para acessar as tabelas usa o comando:
+
+psql -h nomeservidor -U nomeusuario -d nomebancodedados < /caminho/nomearquivo.sql
+
+↬→→→→→→→→→→→→→→→→→→→→→→→→→•••••←←←←←←←←←←←←←←←←←←←←←←←←←←←←↫
+
 Tecnologias usadas:
 
 <div style="display: inline_block"><br>
