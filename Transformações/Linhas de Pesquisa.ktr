@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Linhas de Pesquisa ERS</name>
+    <name>Linhas de Pesquisa</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -431,20 +431,20 @@
     <created_date>2023/01/30 19:08:57.414</created_date>
     <modified_user>-</modified_user>
     <modified_date>2023/01/30 19:08:57.414</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>stage_linPesq</name>
+    <name>stage_pesq</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>stage_linPesq</database>
+    <database>stage_pesq</database>
     <port>5432</port>
-    <username>enrique</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb1ca062d783badf</password>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -489,18 +489,8 @@
   </connection>
   <order>
     <hop>
-      <from>CSV file input</from>
-      <to>Replace in string</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Replace in string</from>
       <to>Remove in string</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Remove in string</from>
-      <to>If field value is null</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -515,7 +505,22 @@
     </hop>
     <hop>
       <from>Upper Case operation</from>
-      <to>Table output</to>
+      <to>Table for Linha Pesquisa</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CSV file input</from>
+      <to>Alter fields</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Alter fields</from>
+      <to>Replace in string</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Remove in string</from>
+      <to>If field value is null</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -530,7 +535,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Programas de Desenvolvimento\Pentaho\Dados Lattes\CSV\linhas_de_pesquisa_all.csv</filename>
+    <filename>C:\Pentaho\CSV\linhas_de_pesquisa_all.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -543,7 +548,7 @@
     <parallel>N</parallel>
     <newline_possible>N</newline_possible>
     <format>mixed</format>
-    <encoding>ISO-8859-1</encoding>
+    <encoding>UTF-8</encoding>
     <fields>
       <field>
         <name>PESQUISA</name>
@@ -629,7 +634,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>254</length>
+        <length>255</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -662,7 +667,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>1832</length>
+        <length>1840</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -715,8 +720,8 @@
     </GUI>
   </step>
   <step>
-    <name>Replace in string</name>
-    <type>ReplaceString</type>
+    <name>If field value is null</name>
+    <type>IfNull</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -725,438 +730,37 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>Y</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
     <fields>
       <field>
-        <in_stream_name>PESQUISA</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[§]</replace_string>
-        <replace_by_string>c</replace_by_string>
+        <name>OBJETIVO</name>
+        <value>nao informado ou descrito</value>
+        <mask/>
         <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>PESQUISA</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[¢£¡]</replace_string>
-        <replace_by_string>a</replace_by_string>
+        <name>RESUMO</name>
+        <value>nao informado ou descrito</value>
+        <mask/>
         <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>PESQUISA</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[ª©]</replace_string>
-        <replace_by_string>e</replace_by_string>
+        <name>ADDRESS_ENTERP</name>
+        <value>nao informado</value>
+        <mask/>
         <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>PESQUISA</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[­]</replace_string>
-        <replace_by_string>i</replace_by_string>
+        <name>ORCID</name>
+        <value>nao informado</value>
+        <mask/>
         <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>PESQUISA</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[µ³]</replace_string>
-        <replace_by_string>o</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>PESQUISA</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[º]</replace_string>
-        <replace_by_string>u</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[§]</replace_string>
-        <replace_by_string>c</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[¢£¡]</replace_string>
-        <replace_by_string>a</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[ª©]</replace_string>
-        <replace_by_string>e</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[­]</replace_string>
-        <replace_by_string>i</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[µ³]</replace_string>
-        <replace_by_string>o</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[º]</replace_string>
-        <replace_by_string>u</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[§]</replace_string>
-        <replace_by_string>c</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[¢£¡]</replace_string>
-        <replace_by_string>a</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[ª©]</replace_string>
-        <replace_by_string>e</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[­]</replace_string>
-        <replace_by_string>i</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[µ³]</replace_string>
-        <replace_by_string>o</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[º]</replace_string>
-        <replace_by_string>u</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[§]</replace_string>
-        <replace_by_string>c</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[¢£¡]</replace_string>
-        <replace_by_string>a</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[ª©]</replace_string>
-        <replace_by_string>e</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[­]</replace_string>
-        <replace_by_string>i</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[µ³]</replace_string>
-        <replace_by_string>o</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[º]</replace_string>
-        <replace_by_string>u</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>RESUME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[§]</replace_string>
-        <replace_by_string>c</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>RESUME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[¢£¡]</replace_string>
-        <replace_by_string>a</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>RESUME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[ª©]</replace_string>
-        <replace_by_string>e</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>RESUME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[­]</replace_string>
-        <replace_by_string>i</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>RESUME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[µ³´]</replace_string>
-        <replace_by_string>o</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>RESUME</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[º]</replace_string>
-        <replace_by_string>u</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[§]</replace_string>
-        <replace_by_string>c</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[¢£¡]</replace_string>
-        <replace_by_string>a</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[ª©]</replace_string>
-        <replace_by_string>e</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[­]</replace_string>
-        <replace_by_string>i</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[µ³]</replace_string>
-        <replace_by_string>o</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
-      </field>
-      <field>
-        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>[º]</replace_string>
-        <replace_by_string>u</replace_by_string>
-        <set_empty_string>N</set_empty_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
       </field>
     </fields>
     <attributes/>
@@ -1168,7 +772,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
+      <xloc>560</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1198,7 +802,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
+        <in_stream_name>OBJETIVO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>[Ã]</replace_string>
@@ -1210,7 +814,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>[Ã]</replace_string>
@@ -1222,7 +826,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>[Ã]</replace_string>
@@ -1234,7 +838,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>RESUME</in_stream_name>
+        <in_stream_name>RESUMO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>[Ã]</replace_string>
@@ -1246,7 +850,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>RESUME</in_stream_name>
+        <in_stream_name>RESUMO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>&amp;amp</replace_string>
@@ -1258,7 +862,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>RESUME</in_stream_name>
+        <in_stream_name>RESUMO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>;#10</replace_string>
@@ -1270,7 +874,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>RESUME</in_stream_name>
+        <in_stream_name>RESUMO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>;quot</replace_string>
@@ -1303,59 +907,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>32</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>If field value is null</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>Y</selectFields>
-    <selectValuesType>N</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      </valuetypes>
-    <fields>
-      <field>
-        <name>OBJECTIVE</name>
-        <value>nao informado ou descrito</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>RESUME</name>
-        <value>nao informado ou descrito</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>ADDRESS_ENTERP</name>
-        <value>nao informado</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
+      <xloc>416</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1373,7 +925,7 @@
     </partitioning>
     <fields>
       <field>
-        <in_stream_name>STATE</in_stream_name>
+        <in_stream_name>ESTADO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
         <replace_string>VAZIO</replace_string>
@@ -1385,7 +937,7 @@
         <is_unicode>no</is_unicode>
       </field>
       <field>
-        <in_stream_name>RESUME</in_stream_name>
+        <in_stream_name>RESUMO</in_stream_name>
         <out_stream_name/>
         <use_regex>no</use_regex>
         <replace_string>VAZIO</replace_string>
@@ -1430,7 +982,710 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
+      <xloc>704</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Replace in string</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>PESQUISA</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>PESQUISA</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>PESQUISA</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>PESQUISA</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>PESQUISA</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕº]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>PESQUISA</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>OBJETIVO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>OBJETIVO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>OBJETIVO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>OBJETIVO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>OBJETIVO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕ]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>OBJETIVO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕ]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕ]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUMO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUMO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUMO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUMO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUMO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕ]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUMO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕ]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>ADDRESS_ENTERP</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CIDADE</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CIDADE</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CIDADE</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CIDADE</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CIDADE</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕ]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CIDADE</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITADO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>c</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITADO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃ]</replace_string>
+        <replace_by_string>a</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITADO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>e</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITADO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>i</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITADO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕ]</replace_string>
+        <replace_by_string>o</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITADO</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>u</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table for Linha Pesquisa</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>stage_pesq</connection>
+    <schema>public</schema>
+    <table>CSV_linhaPesq</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>PESQUISA</column_name>
+        <stream_name>PESQUISA</stream_name>
+      </field>
+      <field>
+        <column_name>OBJETIVO</column_name>
+        <stream_name>OBJETIVO</stream_name>
+      </field>
+      <field>
+        <column_name>ANO_INICIO</column_name>
+        <stream_name>ANO_INICIO</stream_name>
+      </field>
+      <field>
+        <column_name>ANO_FIM</column_name>
+        <stream_name>ANO_FIM</stream_name>
+      </field>
+      <field>
+        <column_name>ID_PESQUISADOR</column_name>
+        <stream_name>ID_PESQUISADOR</stream_name>
+      </field>
+      <field>
+        <column_name>NOME_COMPLETO</column_name>
+        <stream_name>NOME_COMPLETO</stream_name>
+      </field>
+      <field>
+        <column_name>ULTIMO_NOME</column_name>
+        <stream_name>ULTIMO_NOME</stream_name>
+      </field>
+      <field>
+        <column_name>CITADO</column_name>
+        <stream_name>CITADO</stream_name>
+      </field>
+      <field>
+        <column_name>CIDADE</column_name>
+        <stream_name>CIDADE</stream_name>
+      </field>
+      <field>
+        <column_name>ESTADO</column_name>
+        <stream_name>ESTADO</stream_name>
+      </field>
+      <field>
+        <column_name>RESUMO</column_name>
+        <stream_name>RESUMO</stream_name>
+      </field>
+      <field>
+        <column_name>ATUALIZADO</column_name>
+        <stream_name>ATUALIZADO</stream_name>
+      </field>
+      <field>
+        <column_name>ADDRESS_ENTERP</column_name>
+        <stream_name>ADDRESS_ENTERP</stream_name>
+      </field>
+      <field>
+        <column_name>ORCID</column_name>
+        <stream_name>ORCID</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1024</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1461,7 +1716,7 @@
         <remove_special_characters>none</remove_special_characters>
       </field>
       <field>
-        <in_stream_name>OBJECTIVE</in_stream_name>
+        <in_stream_name>OBJETIVO</in_stream_name>
         <out_stream_name/>
         <trim_type>none</trim_type>
         <lower_upper>upper</lower_upper>
@@ -1474,7 +1729,7 @@
         <remove_special_characters>none</remove_special_characters>
       </field>
       <field>
-        <in_stream_name>FULL_NAME</in_stream_name>
+        <in_stream_name>NOME_COMPLETO</in_stream_name>
         <out_stream_name/>
         <trim_type>none</trim_type>
         <lower_upper>upper</lower_upper>
@@ -1487,7 +1742,7 @@
         <remove_special_characters>none</remove_special_characters>
       </field>
       <field>
-        <in_stream_name>LAST_NAME</in_stream_name>
+        <in_stream_name>ULTIMO_NOME</in_stream_name>
         <out_stream_name/>
         <trim_type>none</trim_type>
         <lower_upper>upper</lower_upper>
@@ -1513,7 +1768,7 @@
         <remove_special_characters/>
       </field>
       <field>
-        <in_stream_name>CITY</in_stream_name>
+        <in_stream_name>CIDADE</in_stream_name>
         <out_stream_name/>
         <trim_type>none</trim_type>
         <lower_upper>upper</lower_upper>
@@ -1526,7 +1781,7 @@
         <remove_special_characters>none</remove_special_characters>
       </field>
       <field>
-        <in_stream_name>STATE</in_stream_name>
+        <in_stream_name>ESTADO</in_stream_name>
         <out_stream_name/>
         <trim_type>none</trim_type>
         <lower_upper>upper</lower_upper>
@@ -1539,7 +1794,7 @@
         <remove_special_characters>none</remove_special_characters>
       </field>
       <field>
-        <in_stream_name>RESUME</in_stream_name>
+        <in_stream_name>RESUMO</in_stream_name>
         <out_stream_name/>
         <trim_type>none</trim_type>
         <lower_upper>upper</lower_upper>
@@ -1564,6 +1819,19 @@
         <digits>none</digits>
         <remove_special_characters>none</remove_special_characters>
       </field>
+      <field>
+        <in_stream_name>ORCID</in_stream_name>
+        <out_stream_name/>
+        <trim_type/>
+        <lower_upper>upper</lower_upper>
+        <padding_type/>
+        <pad_char/>
+        <pad_len/>
+        <init_cap/>
+        <mask_xml/>
+        <digits/>
+        <remove_special_characters/>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1574,14 +1842,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
+      <xloc>848</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
+    <name>Alter fields</name>
+    <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1590,80 +1858,246 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>stage_linPesq</connection>
-    <schema>public</schema>
-    <table>stage_linhaPesq</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
     <fields>
-      <field>
-        <column_name>PESQUISA</column_name>
-        <stream_name>PESQUISA</stream_name>
-      </field>
-      <field>
-        <column_name>OBJECTIVE</column_name>
-        <stream_name>OBJECTIVE</stream_name>
-      </field>
-      <field>
-        <column_name>YEAR_INI</column_name>
-        <stream_name>YEAR_INI</stream_name>
-      </field>
-      <field>
-        <column_name>YEAR_FIN</column_name>
-        <stream_name>YEAR_FIN</stream_name>
-      </field>
-      <field>
-        <column_name>ID</column_name>
-        <stream_name>ID</stream_name>
-      </field>
-      <field>
-        <column_name>FULL_NAME</column_name>
-        <stream_name>FULL_NAME</stream_name>
-      </field>
-      <field>
-        <column_name>LAST_NAME</column_name>
-        <stream_name>LAST_NAME</stream_name>
-      </field>
-      <field>
-        <column_name>CITADO</column_name>
-        <stream_name>CITADO</stream_name>
-      </field>
-      <field>
-        <column_name>CITY</column_name>
-        <stream_name>CITY</stream_name>
-      </field>
-      <field>
-        <column_name>STATE</column_name>
-        <stream_name>STATE</stream_name>
-      </field>
-      <field>
-        <column_name>RESUME</column_name>
-        <stream_name>RESUME</stream_name>
-      </field>
-      <field>
-        <column_name>UPDATE</column_name>
-        <stream_name>UPDATE</stream_name>
-      </field>
-      <field>
-        <column_name>ADDRESS_ENTERP</column_name>
-        <stream_name>ADDRESS_ENTERP</stream_name>
-      </field>
-      <field>
-        <column_name>ORCID</column_name>
-        <stream_name>ORCID</stream_name>
-      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>PESQUISA</name>
+        <rename>PESQUISA</rename>
+        <type>String</type>
+        <length>145</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>OBJECTIVE</name>
+        <rename>OBJETIVO</rename>
+        <type>String</type>
+        <length>1250</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>YEAR_INI</name>
+        <rename>ANO_INICIO</rename>
+        <type>String</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>YEAR_FIN</name>
+        <rename>ANO_FIM</rename>
+        <type>String</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ID</name>
+        <rename>ID_PESQUISADOR</rename>
+        <type>Number</type>
+        <length>15</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>FULL_NAME</name>
+        <rename>NOME_COMPLETO</rename>
+        <type>String</type>
+        <length>45</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>LAST_NAME</name>
+        <rename>ULTIMO_NOME</rename>
+        <type>String</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>CITADO</name>
+        <rename>CITADO</rename>
+        <type>String</type>
+        <length>255</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>CITY</name>
+        <rename>CIDADE</rename>
+        <type>String</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>STATE</name>
+        <rename>ESTADO</rename>
+        <type>String</type>
+        <length>5</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>RESUME</name>
+        <rename>RESUMO</rename>
+        <type>String</type>
+        <length>1840</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>UPDATE</name>
+        <rename>ATUALIZADO</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd/MM/yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ADDRESS_ENTERP</name>
+        <rename>ADDRESS_ENTERP</rename>
+        <type>String</type>
+        <length>60</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ORCID</name>
+        <rename>ORCID</rename>
+        <type>String</type>
+        <length>40</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type>normal</storage_type>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1674,7 +2108,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
+      <xloc>160</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>

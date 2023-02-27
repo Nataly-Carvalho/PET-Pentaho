@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>capitulos</name>
+    <name>Capitulos</name>
     <description>PET - capitulos </description>
     <extended_description/>
     <trans_version/>
@@ -437,11 +437,11 @@
   <notepads>
   </notepads>
   <connection>
-    <name>stage</name>
+    <name>stage_pesq</name>
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>stage</database>
+    <database>stage_pesq</database>
     <port>5432</port>
     <username>postgres</username>
     <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
@@ -489,7 +489,7 @@
   </connection>
   <order>
     <hop>
-      <from>CSV file input</from>
+      <from>Capitulos</from>
       <to>String operations</to>
       <enabled>Y</enabled>
     </hop>
@@ -500,17 +500,17 @@
     </hop>
     <hop>
       <from>acentuacao</from>
-      <to>Select values</to>
+      <to>Alter fields</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Select values</from>
-      <to>Table output</to>
+      <from>Alter fields</from>
+      <to>Table for Capitulos</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>CSV file input</name>
+    <name>Capitulos</name>
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -520,7 +520,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Users\laish\OneDrive\Área de Trabalho\Programing\Programas\Arquivo\capitulos_all.csv</filename>
+    <filename>C:\Pentaho\CSV\capitulos_all.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -542,7 +542,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>142</length>
+        <length>145</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -575,7 +575,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>42</length>
+        <length>45</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -597,7 +597,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>51</length>
+        <length>55</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -652,7 +652,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>254</length>
+        <length>255</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -663,7 +663,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>24</length>
+        <length>25</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -674,7 +674,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>2</length>
+        <length>5</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -685,7 +685,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>1996</length>
+        <length>2000</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -707,7 +707,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>49</length>
+        <length>50</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -718,7 +718,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>37</length>
+        <length>40</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -732,8 +732,393 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>200</xloc>
-      <yloc>100</yloc>
+      <xloc>64</xloc>
+      <yloc>48</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Alter fields</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>TITLE</name>
+        <rename/>
+      </field>
+      <field>
+        <name>YEAR</name>
+        <rename/>
+      </field>
+      <field>
+        <name>LANG</name>
+        <rename/>
+      </field>
+      <field>
+        <name>EDITORA</name>
+        <rename/>
+      </field>
+      <field>
+        <name>AUTHOR</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ORDER</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ORDER_OK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ID</name>
+        <rename/>
+      </field>
+      <field>
+        <name>FULL_NAME</name>
+        <rename/>
+      </field>
+      <field>
+        <name>LAST_NAME</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CITADO</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CITY</name>
+        <rename/>
+      </field>
+      <field>
+        <name>STATE</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RESUME</name>
+        <rename/>
+      </field>
+      <field>
+        <name>UPDATE</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ADDRESS_ENTERP</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ORCID</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>TITLE</name>
+        <rename>TITULO</rename>
+        <type>String</type>
+        <length>145</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>YEAR</name>
+        <rename>ANO</rename>
+        <type>String</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>LANG</name>
+        <rename>IDIOMA</rename>
+        <type>String</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>EDITORA</name>
+        <rename>EDITORA</rename>
+        <type>String</type>
+        <length>45</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>AUTHOR</name>
+        <rename>AUTORES</rename>
+        <type>String</type>
+        <length>240</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ORDER</name>
+        <rename>ORDER</rename>
+        <type>String</type>
+        <length>55</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ORDER_OK</name>
+        <rename>ORDER_OK</rename>
+        <type>String</type>
+        <length>5</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ID</name>
+        <rename>ID_PESQUISADOR</rename>
+        <type>Integer</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>FULL_NAME</name>
+        <rename>NOME_COMPLETO</rename>
+        <type>String</type>
+        <length>45</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>LAST_NAME</name>
+        <rename>ULTIMO_NOME</rename>
+        <type>String</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>CITADO</name>
+        <rename>CITADO</rename>
+        <type>String</type>
+        <length>255</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>CITY</name>
+        <rename>CIDADE</rename>
+        <type>String</type>
+        <length>25</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>STATE</name>
+        <rename>ESTADO</rename>
+        <type>String</type>
+        <length>5</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>RESUME</name>
+        <rename>RESUMO</rename>
+        <type>String</type>
+        <length>2000</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>UPDATE</name>
+        <rename>ATUALIZADO</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd/MM/yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ADDRESS_ENTERP</name>
+        <rename>ADDRESS_ENTERP</rename>
+        <type>String</type>
+        <length>50</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ORCID</name>
+        <rename>ORCID</rename>
+        <type>String</type>
+        <length>40</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>656</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -941,8 +1326,120 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>100</yloc>
+      <xloc>256</xloc>
+      <yloc>48</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Table for Capitulos</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>stage_pesq</connection>
+    <schema>public</schema>
+    <table>CSV_capitulos</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>TITULO</column_name>
+        <stream_name>TITULO</stream_name>
+      </field>
+      <field>
+        <column_name>ANO</column_name>
+        <stream_name>ANO</stream_name>
+      </field>
+      <field>
+        <column_name>IDIOMA</column_name>
+        <stream_name>IDIOMA</stream_name>
+      </field>
+      <field>
+        <column_name>EDITORA</column_name>
+        <stream_name>EDITORA</stream_name>
+      </field>
+      <field>
+        <column_name>AUTORES</column_name>
+        <stream_name>AUTORES</stream_name>
+      </field>
+      <field>
+        <column_name>ORDER</column_name>
+        <stream_name>ORDER</stream_name>
+      </field>
+      <field>
+        <column_name>ORDER_OK</column_name>
+        <stream_name>ORDER_OK</stream_name>
+      </field>
+      <field>
+        <column_name>ID_PESQUISADOR</column_name>
+        <stream_name>ID_PESQUISADOR</stream_name>
+      </field>
+      <field>
+        <column_name>NOME_COMPLETO</column_name>
+        <stream_name>NOME_COMPLETO</stream_name>
+      </field>
+      <field>
+        <column_name>ULTIMO_NOME</column_name>
+        <stream_name>ULTIMO_NOME</stream_name>
+      </field>
+      <field>
+        <column_name>CITADO</column_name>
+        <stream_name>CITADO</stream_name>
+      </field>
+      <field>
+        <column_name>CIDADE</column_name>
+        <stream_name>CIDADE</stream_name>
+      </field>
+      <field>
+        <column_name>ESTADO</column_name>
+        <stream_name>ESTADO</stream_name>
+      </field>
+      <field>
+        <column_name>RESUMO</column_name>
+        <stream_name>RESUMO</stream_name>
+      </field>
+      <field>
+        <column_name>ATUALIZADO</column_name>
+        <stream_name>ATUALIZADO</stream_name>
+      </field>
+      <field>
+        <column_name>ADDRESS_ENTERP</column_name>
+        <stream_name>ADDRESS_ENTERP</stream_name>
+      </field>
+      <field>
+        <column_name>ORCID</column_name>
+        <stream_name>ORCID</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>864</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -968,7 +1465,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITLE</in_stream_name>
@@ -980,7 +1477,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITLE</in_stream_name>
@@ -992,7 +1489,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITLE</in_stream_name>
@@ -1004,7 +1501,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITLE</in_stream_name>
@@ -1016,7 +1513,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITLE</in_stream_name>
@@ -1028,7 +1525,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>EDITORA</in_stream_name>
@@ -1040,7 +1537,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>EDITORA</in_stream_name>
@@ -1052,7 +1549,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>EDITORA</in_stream_name>
@@ -1064,7 +1561,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>EDITORA</in_stream_name>
@@ -1076,7 +1573,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>EDITORA</in_stream_name>
@@ -1088,7 +1585,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>EDITORA</in_stream_name>
@@ -1100,7 +1597,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>AUTHOR</in_stream_name>
@@ -1112,7 +1609,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>AUTHOR</in_stream_name>
@@ -1124,7 +1621,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>AUTHOR</in_stream_name>
@@ -1136,7 +1633,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>AUTHOR</in_stream_name>
@@ -1148,7 +1645,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>AUTHOR</in_stream_name>
@@ -1160,7 +1657,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>AUTHOR</in_stream_name>
@@ -1172,7 +1669,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1184,7 +1681,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1196,7 +1693,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1208,7 +1705,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1220,7 +1717,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1232,7 +1729,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1244,7 +1741,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1256,7 +1753,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1268,7 +1765,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1280,7 +1777,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1292,7 +1789,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1304,7 +1801,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1316,7 +1813,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1328,7 +1825,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1340,7 +1837,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1352,7 +1849,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1364,7 +1861,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1376,7 +1873,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1388,7 +1885,223 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>LANG</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃª]</replace_string>
+        <replace_by_string>A</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>LANG</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>E</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>LANG</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>I</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>LANG</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕº]</replace_string>
+        <replace_by_string>O</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>LANG</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>U</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>LANG</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>C</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITY</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃª]</replace_string>
+        <replace_by_string>A</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITY</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>E</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITY</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>I</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITY</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕº]</replace_string>
+        <replace_by_string>O</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITY</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>U</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>CITY</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>C</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÁÀÂÃª]</replace_string>
+        <replace_by_string>A</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÉÈÊ]</replace_string>
+        <replace_by_string>E</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÍÌÎ]</replace_string>
+        <replace_by_string>I</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÓÒÔÕº]</replace_string>
+        <replace_by_string>O</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[ÚÙÛÜ]</replace_string>
+        <replace_by_string>U</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
+      </field>
+      <field>
+        <in_stream_name>RESUME</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>[Ç]</replace_string>
+        <replace_by_string>C</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+        <is_unicode>yes</is_unicode>
       </field>
     </fields>
     <attributes/>
@@ -1400,505 +2113,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>600</xloc>
-      <yloc>100</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>TITLE</name>
-        <rename/>
-      </field>
-      <field>
-        <name>YEAR</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LANG</name>
-        <rename/>
-      </field>
-      <field>
-        <name>EDITORA</name>
-        <rename/>
-      </field>
-      <field>
-        <name>AUTHOR</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ORDER</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ORDER_OK</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ID</name>
-        <rename/>
-      </field>
-      <field>
-        <name>FULL_NAME</name>
-        <rename/>
-      </field>
-      <field>
-        <name>LAST_NAME</name>
-        <rename/>
-      </field>
-      <field>
-        <name>CITADO</name>
-        <rename/>
-      </field>
-      <field>
-        <name>CITY</name>
-        <rename/>
-      </field>
-      <field>
-        <name>STATE</name>
-        <rename/>
-      </field>
-      <field>
-        <name>RESUME</name>
-        <rename/>
-      </field>
-      <field>
-        <name>UPDATE</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ADDRESS_ENTERP</name>
-        <rename/>
-      </field>
-      <field>
-        <name>ORCID</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>TITLE</name>
-        <rename>TITLE</rename>
-        <type>String</type>
-        <length>142</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>YEAR</name>
-        <rename>YEAR</rename>
-        <type>Date</type>
-        <length>15</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>LANG</name>
-        <rename>LANG</rename>
-        <type>String</type>
-        <length>10</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>EDITORA</name>
-        <rename>EDITORA</rename>
-        <type>String</type>
-        <length>42</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>AUTHOR</name>
-        <rename>AUTHOR</rename>
-        <type>String</type>
-        <length>240</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ORDER</name>
-        <rename>ORDER</rename>
-        <type>String</type>
-        <length>51</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ORDER_OK</name>
-        <rename>ORDER_OK</rename>
-        <type>String</type>
-        <length>5</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ID</name>
-        <rename>ID</rename>
-        <type>Number</type>
-        <length>15</length>
-        <precision>0</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>FULL_NAME</name>
-        <rename>FULL_NAME</rename>
-        <type>String</type>
-        <length>45</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>LAST_NAME</name>
-        <rename>LAST_NAME</rename>
-        <type>String</type>
-        <length>10</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>CITADO</name>
-        <rename>CITADO</rename>
-        <type>String</type>
-        <length>254</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>CITY</name>
-        <rename>CITY</rename>
-        <type>String</type>
-        <length>24</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>STATE</name>
-        <rename>STATE</rename>
-        <type>String</type>
-        <length>2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>RESUME</name>
-        <rename>RESUME</rename>
-        <type>String</type>
-        <length>1996</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>UPDATE</name>
-        <rename>UPDATE</rename>
-        <type>Date</type>
-        <length>15</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ADDRESS_ENTERP</name>
-        <rename>ADDRESS_ENTERP</rename>
-        <type>String</type>
-        <length>49</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ORCID</name>
-        <rename>ORCID</rename>
-        <type>String</type>
-        <length>37</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>800</xloc>
-      <yloc>100</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>stage</connection>
-    <schema>public</schema>
-    <table>stage_capitulos</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-      <field>
-        <column_name>TITLE</column_name>
-        <stream_name>TITLE</stream_name>
-      </field>
-      <field>
-        <column_name>YEAR</column_name>
-        <stream_name>YEAR</stream_name>
-      </field>
-      <field>
-        <column_name>LANG</column_name>
-        <stream_name>LANG</stream_name>
-      </field>
-      <field>
-        <column_name>EDITORA</column_name>
-        <stream_name>EDITORA</stream_name>
-      </field>
-      <field>
-        <column_name>AUTHOR</column_name>
-        <stream_name>AUTHOR</stream_name>
-      </field>
-      <field>
-        <column_name>ORDER</column_name>
-        <stream_name>ORDER</stream_name>
-      </field>
-      <field>
-        <column_name>ORDER_OK</column_name>
-        <stream_name>ORDER_OK</stream_name>
-      </field>
-      <field>
-        <column_name>ID</column_name>
-        <stream_name>ID</stream_name>
-      </field>
-      <field>
-        <column_name>FULL_NAME</column_name>
-        <stream_name>FULL_NAME</stream_name>
-      </field>
-      <field>
-        <column_name>LAST_NAME</column_name>
-        <stream_name>LAST_NAME</stream_name>
-      </field>
-      <field>
-        <column_name>CITADO</column_name>
-        <stream_name>CITADO</stream_name>
-      </field>
-      <field>
-        <column_name>CITY</column_name>
-        <stream_name>CITY</stream_name>
-      </field>
-      <field>
-        <column_name>STATE</column_name>
-        <stream_name>STATE</stream_name>
-      </field>
-      <field>
-        <column_name>RESUME</column_name>
-        <stream_name>RESUME</stream_name>
-      </field>
-      <field>
-        <column_name>UPDATE</column_name>
-        <stream_name>UPDATE</stream_name>
-      </field>
-      <field>
-        <column_name>ADDRESS_ENTERP</column_name>
-        <stream_name>ADDRESS_ENTERP</stream_name>
-      </field>
-      <field>
-        <column_name>ORCID</column_name>
-        <stream_name>ORCID</stream_name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1000</xloc>
-      <yloc>100</yloc>
+      <xloc>464</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

@@ -441,7 +441,7 @@
     <server>localhost</server>
     <type>POSTGRESQL</type>
     <access>Native</access>
-    <database>stage</database>
+    <database>CSV Bancas Graduação</database>
     <port>5432</port>
     <username>postgres</username>
     <password>Encrypted 2be98afc86aa7f2e4bb16bd64d980aac9</password>
@@ -520,1297 +520,1297 @@
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ANO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ANO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ANO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ANO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ANO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ANO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CODIGO_INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CODIGO_INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CODIGO_INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CODIGO_INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CODIGO_INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CODIGO_INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>IDIOMA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>IDIOMA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>IDIOMA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>IDIOMA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>IDIOMA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>IDIOMA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NATUREZA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NATUREZA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NATUREZA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NATUREZA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NATUREZA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NATUREZA</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DA-INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DA-INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DA-INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DA-INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DA-INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DA-INSTITUICAO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CANDIDATO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CANDIDATO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CANDIDATO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CANDIDATO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CANDIDATO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CANDIDATO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CURSO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CURSO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CURSO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CURSO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CURSO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>NOME-DO-CURSO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>PAIS</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>PAIS</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>PAIS</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>PAIS</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>PAIS</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>PAIS</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITULO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITULO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITULO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITULO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITULO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>TITULO</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>UPDATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÁÀÂÃª</replace_string>
+        <replace_string>[ÁÀÂÃª]</replace_string>
         <replace_by_string>A</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>UPDATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÉÈÊ</replace_string>
+        <replace_string>[ÉÈÊ]</replace_string>
         <replace_by_string>E</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>UPDATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÍÌÎ</replace_string>
+        <replace_string>[ÍÌÎ]</replace_string>
         <replace_by_string>I</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>UPDATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÓÒÔÕº</replace_string>
+        <replace_string>[ÓÒÔÕº]</replace_string>
         <replace_by_string>O</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>UPDATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>ÚÙÛÜ</replace_string>
+        <replace_string>[ÚÙÛÜ]</replace_string>
         <replace_by_string>U</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>UPDATE</in_stream_name>
         <out_stream_name/>
         <use_regex>yes</use_regex>
-        <replace_string>Ç</replace_string>
+        <replace_string>[Ç]</replace_string>
         <replace_by_string>C</replace_by_string>
         <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
     </fields>
     <attributes/>
@@ -1838,7 +1838,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\Users\natal\OneDrive\Área de Trabalho\Pastas\Repositorios\PET-Pentaho\rafatieppo-lucylattes-163c86e\csv_producao\bancas_graduacao_all.csv</filename>
+    <filename>C:\Users\PET\Downloads\bancas_graduacao_all.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -1854,24 +1854,13 @@
     <encoding>UTF-8</encoding>
     <fields>
       <field>
-        <name>ID</name>
-        <type>Integer</type>
-        <format/>
-        <currency>R$</currency>
-        <decimal>,</decimal>
-        <group>.</group>
-        <length>500</length>
-        <precision>0</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
         <name>NATUREZA</name>
         <type>String</type>
         <format/>
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>9</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1882,18 +1871,18 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>181</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>ANO</name>
         <type>String</type>
-        <format/>
+        <format>#</format>
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>15</length>
         <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1904,7 +1893,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>6</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1915,7 +1904,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>9</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1926,7 +1915,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>63</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1937,7 +1926,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>14</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1948,7 +1937,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>75</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1959,8 +1948,19 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>45</length>
         <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>ID</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>R$</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
@@ -1970,7 +1970,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>44</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1981,7 +1981,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>10</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -1992,7 +1992,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>87</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -2003,7 +2003,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>14</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -2014,7 +2014,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>2</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -2025,18 +2025,18 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>5000</length>
+        <length>1337</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
       <field>
         <name>UPDATE</name>
         <type>String</type>
-        <format/>
+        <format>dd-MM-yyyy</format>
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -2047,7 +2047,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>48</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>
@@ -2058,7 +2058,7 @@
         <currency>R$</currency>
         <decimal>,</decimal>
         <group>.</group>
-        <length>500</length>
+        <length>37</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
       </field>

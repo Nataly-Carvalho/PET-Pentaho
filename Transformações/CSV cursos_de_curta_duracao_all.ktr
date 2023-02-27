@@ -965,7 +965,7 @@
     <footer>N</footer>
     <format>DOS</format>
     <compression>None</compression>
-    <encoding/>
+    <encoding>windows-1252</encoding>
     <endedLine/>
     <fileNameInField>N</fileNameInField>
     <fileNameField/>
@@ -1025,7 +1025,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
@@ -1037,7 +1037,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
@@ -1049,7 +1049,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
@@ -1061,7 +1061,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
@@ -1073,7 +1073,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ADDRESS_ENTERP</in_stream_name>
@@ -1085,7 +1085,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1097,7 +1097,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1109,7 +1109,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1121,7 +1121,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1133,7 +1133,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1145,7 +1145,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITADO</in_stream_name>
@@ -1157,7 +1157,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
@@ -1169,7 +1169,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
@@ -1181,7 +1181,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
@@ -1193,7 +1193,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
@@ -1205,7 +1205,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
@@ -1217,7 +1217,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>CITY</in_stream_name>
@@ -1229,7 +1229,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>COURSE</in_stream_name>
@@ -1241,7 +1241,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>COURSE</in_stream_name>
@@ -1253,7 +1253,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>COURSE</in_stream_name>
@@ -1265,7 +1265,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>COURSE</in_stream_name>
@@ -1277,7 +1277,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>COURSE</in_stream_name>
@@ -1289,7 +1289,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>COURSE</in_stream_name>
@@ -1301,7 +1301,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1313,7 +1313,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1325,7 +1325,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1337,7 +1337,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1349,7 +1349,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1361,7 +1361,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>FULL_NAME</in_stream_name>
@@ -1373,7 +1373,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>INTEGRANTES</in_stream_name>
@@ -1385,7 +1385,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>INTEGRANTES</in_stream_name>
@@ -1397,7 +1397,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>INTEGRANTES</in_stream_name>
@@ -1409,7 +1409,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>INTEGRANTES</in_stream_name>
@@ -1421,7 +1421,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>INTEGRANTES</in_stream_name>
@@ -1433,7 +1433,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>INTEGRANTES</in_stream_name>
@@ -1445,7 +1445,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1457,7 +1457,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1469,7 +1469,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1481,7 +1481,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1493,7 +1493,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1505,7 +1505,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>LAST_NAME</in_stream_name>
@@ -1517,7 +1517,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
@@ -1529,7 +1529,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
@@ -1541,7 +1541,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
@@ -1553,7 +1553,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
@@ -1565,7 +1565,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
@@ -1577,7 +1577,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>ORCID</in_stream_name>
@@ -1589,7 +1589,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
@@ -1601,7 +1601,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
@@ -1613,7 +1613,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
@@ -1625,7 +1625,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
@@ -1637,7 +1637,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
@@ -1649,7 +1649,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>RESUME</in_stream_name>
@@ -1661,7 +1661,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
@@ -1673,7 +1673,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
@@ -1685,7 +1685,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
@@ -1697,7 +1697,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
@@ -1709,7 +1709,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
@@ -1721,7 +1721,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
       <field>
         <in_stream_name>STATE</in_stream_name>
@@ -1733,7 +1733,7 @@
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
-        <is_unicode>no</is_unicode>
+        <is_unicode>yes</is_unicode>
       </field>
     </fields>
     <attributes/>
