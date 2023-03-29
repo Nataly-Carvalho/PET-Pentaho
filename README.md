@@ -49,8 +49,10 @@ No merge é feito a junção das tabelas escolhidas e com a tabela full name.
 <br>
 
 E então foi chamada no LucyLattes.py
+<br>
 <a href="https://imgur.com/fSzYVgg"><img src="https://i.imgur.com/vE2svaf.png" title="source: imgur.com" /></a>
-<a href="https://imgur.com/fSzYVgg"><img src="hhttps://i.imgur.com/Vd8GWyu.png" title="source: imgur.com" /></a>
+<br>
+<a href="https://imgur.com/fSzYVgg"><img src="https://i.imgur.com/Vd8GWyu.png" title="source: imgur.com" /></a>
 
 
 ↬→→→→→→→→→→→→→→→→→→→→→→→→→•••••←←←←←←←←←←←←←←←←←←←←←←←←←←←←↫
