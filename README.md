@@ -69,7 +69,7 @@ O formato da fonte externa é .csv e está sendo separado por vírgula(,).
 
 ↬→→→→→→→→→→→→→→→→→→→→→→→→→•••••←←←←←←←←←←←←←←←←←←←←←←←←←←←←↫
 
-Apois isso foi realizado um dump com a database gerando o arquivo stage_pesq.sql usando o seguinte com:
+Apos isso foi realizado um dump com a database gerando o arquivo stage_pesq.sql usando o seguinte com:
 
 pg_dump -h localhost -p 5432 -U postgres stage_pesq > C:\stage_pesq.sql
 
