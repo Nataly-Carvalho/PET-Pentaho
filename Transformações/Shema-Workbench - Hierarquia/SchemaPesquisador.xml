@@ -1,0 +1,224 @@
+<Schema name="PesquisadorSchema">
+  <Cube name="CuboPesquisador" visible="true" cache="true" enabled="true">
+    <Table name="fato_pesquisador" schema="public">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_pesquisador_sk" highCardinality="false" name="dim_pesquisador">
+      <Hierarchy name="Pesquisadores" visible="true" hasAll="true" allMemberName="todos Pesquisadores">
+        <Table name="dim_pesquisador" schema="public">
+        </Table>
+        <Level name="ID Pesquisador" visible="true" table="dim_pesquisador" column="id_pesq" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Cidade" visible="true" table="dim_pesquisador" column="cidade" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Estado" visible="true" table="dim_pesquisador" column="estado" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Instituicao Trabalho" visible="true" table="dim_pesquisador" column="instituicao_trabalha" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Data Curriculo" visible="true" table="dim_pesquisador" column="atualizado" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Nome" visible="true" table="dim_pesquisador" column="nome_completo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_bancas_sk" highCardinality="false" name="dim_bancas">
+      <Hierarchy name="Bancas" visible="true" hasAll="true" allMemberName="Todas Bancas">
+        <Table name="dim_bancas" schema="public">
+        </Table>
+        <Level name="ID Bancas" visible="true" table="dim_bancas" column="id_bnc" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Natureza Banca" visible="true" table="dim_bancas" column="natureza" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Titulo Banca" visible="true" table="dim_bancas" column="titulo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Banca" visible="true" table="dim_bancas" column="ano" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Pa&#237;s Banca" visible="true" table="dim_bancas" column="pais" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Idioma Banca" visible="true" table="dim_bancas" column="idioma" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Estudante Banca" visible="true" table="dim_bancas" column="nome_candidato" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Curso Banca" visible="true" table="dim_bancas" column="nome_curso" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Instituicao Banca" visible="true" table="dim_bancas" column="nome_instituicao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_orientacao_sk" highCardinality="false" name="dim_orientacoes">
+      <Hierarchy name="Orientacoes" visible="true" hasAll="true" allMemberName="Todas Orientacoes">
+        <Table name="dim_orientacao" schema="public">
+        </Table>
+        <Level name="ID Orientacao" visible="true" table="dim_orientacao" column="id_orient" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Natureza Orientacao" visible="true" table="dim_orientacao" column="natureza_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Tipo Orientacao" visible="true" table="dim_orientacao" column="tipo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Orientacao" visible="true" table="dim_orientacao" column="ano_1" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Estudante Orientacao" visible="true" table="dim_orientacao" column="estudante" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Curso Orientacao" visible="true" table="dim_orientacao" column="curso" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Instituicao Orientacao" visible="true" table="dim_orientacao" column="instituicao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_periodico_sk" highCardinality="false" name="dim_periodicos">
+      <Hierarchy name="Periodicos" visible="true" hasAll="true" allMemberName="Todos Periodicos">
+        <Table name="dim_periodico" schema="public">
+        </Table>
+        <Level name="ID Periodico" visible="true" table="dim_periodico" column="id_period" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Tituto Periodico" visible="true" table="dim_periodico" column="titulo_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Publicado" visible="true" table="dim_periodico" column="publicado" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Idioma Periodico" visible="true" table="dim_periodico" column="idioma_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Periodico" visible="true" table="dim_periodico" column="ano_2" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Autores Periodicos" visible="true" table="dim_periodico" column="autores" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Digital Object Identifier" visible="true" table="dim_periodico" column="doi" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Qualis" visible="true" table="dim_periodico" column="qualis" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_ccd_sk" highCardinality="false" name="dim_curso_curta_duracao">
+      <Hierarchy name="Cursos Curta Duracao" visible="true" hasAll="true" allMemberName="Todos Cursos Curta Duracao">
+        <Table name="dim_ccd" schema="public">
+        </Table>
+        <Level name="ID CCD" visible="true" table="dim_ccd" column="id_ccd" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Curso CCD" visible="true" table="dim_ccd" column="curso_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Integrates CCD" visible="true" table="dim_ccd" column="integrantes" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_projeto_sk" highCardinality="false" name="dim_projetos">
+      <Hierarchy name="Projetos" visible="true" hasAll="true" allMemberName="Todos Projetos">
+        <Table name="dim_projeto" schema="public">
+        </Table>
+        <Level name="ID Projeto" visible="true" table="dim_projeto" column="id_proj" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Nome Projeto" visible="true" table="dim_projeto" column="projeto" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Descricao Projeto" visible="true" table="dim_projeto" column="descricao" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Inicio Projeto" visible="true" table="dim_projeto" column="ano_inicio" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Fim Projeto" visible="true" table="dim_projeto" column="ano_fim" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Integrantes Projeto" visible="true" table="dim_projeto" column="integrantes_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_pesquisas_sk" highCardinality="false" name="dim_pesquisas">
+      <Hierarchy name="Pesquisas" visible="true" hasAll="true" allMemberName="Todas Pesquisas">
+        <Table name="dim_pesquisas" schema="public">
+        </Table>
+        <Level name="ID Pesquisa" visible="true" table="dim_pesquisas" column="id_ln_pesq" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Nome Pesquisa" visible="true" table="dim_pesquisas" column="pesquisa" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Descricao Pesquisa" visible="true" table="dim_pesquisas" column="objetivo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Inicio Pesquisa" visible="true" table="dim_pesquisas" column="ano_inicio_1" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Fim Pesquisa" visible="true" table="dim_pesquisas" column="ano_fim_1" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_producao_sk" highCardinality="false" name="dim_producoes">
+      <Hierarchy name="Producoes" visible="true" hasAll="true" allMemberName="Todas Producoes">
+        <Table name="dim_producao" schema="public">
+        </Table>
+        <Level name="ID Producao" visible="true" table="dim_producao" column="id_prod" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Nome Producao" visible="true" table="dim_producao" column="titulo_2" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Tipo Producao" visible="true" table="dim_producao" column="tipo_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_patente_sk" highCardinality="false" name="dim_patente">
+      <Hierarchy name="Patentes" visible="true" hasAll="true" allMemberName="Todas Patentes">
+        <Table name="dim_patente" schema="public">
+        </Table>
+        <Level name="ID Patente" visible="true" table="dim_patente" column="id_pat" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Codigo Patente" visible="true" table="dim_patente" column="codigo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Categoria Patente" visible="true" table="dim_patente" column="categoria" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Tipo Patente" visible="true" table="dim_patente" column="tipo_2" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Titulo Patente" visible="true" table="dim_patente" column="titulo_3" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Patente" visible="true" table="dim_patente" column="ano_4" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Pa&#237;s Patente" visible="true" table="dim_patente" column="pais_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Instituicao" visible="true" table="dim_patente" column="instituicao_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Autores Patente" visible="true" table="dim_patente" column="nome_autores" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_premio_titulo_sk" highCardinality="false" name="dim_premios_titulos">
+      <Hierarchy name="Premios Titulos" visible="true" hasAll="true" allMemberName="Todos Premios Titulos">
+        <Table name="dim_premio_titulo" schema="public">
+        </Table>
+        <Level name="ID Premio Titulo" visible="true" table="dim_premio_titulo" column="id_prem_titulo" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Nome Premio Titulo" visible="true" table="dim_premio_titulo" column="titulo_4" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Premio Titulo" visible="true" table="dim_premio_titulo" column="ano_5" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Entidade Promotora" visible="true" table="dim_premio_titulo" column="entidade_promotora" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_capitulo_livro_sk" highCardinality="false" name="dim_capitulos_livros">
+      <Hierarchy name="Capitulos Livros" visible="true" hasAll="true" allMemberName="Todos Capitulos Livros">
+        <Table name="dim_capitulo_livro" schema="public">
+        </Table>
+        <Level name="ID Capitulo Livro" visible="true" table="dim_capitulo_livro" column="id_cap_livros" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Natureza Capitulo Livro" visible="true" table="dim_capitulo_livro" column="natureza_3" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Titulo Capitulo Livro" visible="true" table="dim_capitulo_livro" column="titulo_5" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Ano Capitulo Livro" visible="true" table="dim_capitulo_livro" column="ano_6" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Idioma Capitulo Livro" visible="true" table="dim_capitulo_livro" column="idioma_2" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Autores Capitulo Livro" visible="true" table="dim_capitulo_livro" column="autores_1" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="i_dim_junk_pesquisador_sk" highCardinality="false" name="dim_junk_pesquisador">
+      <Hierarchy name="Junk Pesquisador" visible="true" hasAll="true" allMemberName="Todos Junk">
+        <Table name="dim_junk_pesquisador" schema="public">
+        </Table>
+        <Level name="ID Junk" visible="true" table="dim_junk_pesquisador" column="id_pesq" type="Integer" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Orcid Pesquisador" visible="true" table="dim_junk_pesquisador" column="orcid" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Issn Periodico" visible="true" table="dim_junk_pesquisador" column="issn" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Jcr Periodico" visible="true" table="dim_junk_pesquisador" column="jcr" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+        <Level name="Editora Capitulo Livro" visible="true" table="dim_junk_pesquisador" column="editora" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Total Pesquisadores" column="id_pesq_pk" datatype="Integer" aggregator="distinct-count" visible="true">
+    </Measure>
+    <Measure name="Total Bancas" column="i_dim_bancas_sk" datatype="Integer" aggregator="distinct-count" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
