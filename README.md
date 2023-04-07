@@ -27,6 +27,7 @@ no https://lattes.cnpq.br baixe os curriculum e em seguida deve ser colocado na 
 - Volte para outra pasta e encontre a pasta list_id_name.txt.
 <br>
 <a href="https://imgur.com/p9vLtvR"><img src="https://i.imgur.com/egjnOdK.png" title="source: imgur.com" /></a>
+<br>
 E adicione ID do pesquisador que é o nome da pasta quando é baixado Lattes o nome e o título da pessoa.
 <a href="https://imgur.com/p9vLtvR"><img src="https://i.imgur.com/mFTfVKF.png" title="source: imgur.com" /></a>
 
