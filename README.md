@@ -2,7 +2,7 @@
 ### Projeto desenvolvido para o PET-Facep com parceria com o CESAR School
 Orientadores: Rafael Ferreira e Luana Cristina 
 
-ANÁLISE DOS DADOS
+- ANÁLISE DOS DADOS
 Fonte dos dados: O projeto se trata de extrair dados de currículos de pesquisadores do Cesar na plataforma https://lattes.cnpq.br  utilizado o LucyLates com base no repositório  https://github.com/rafatieppo/lucylattes para automatizar o processo (O LucyLattes é programado em python), os dados que precisamos extrair foram os seguintes.
 
 - Atuação profissional
